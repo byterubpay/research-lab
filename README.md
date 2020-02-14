@@ -1,6 +1,6 @@
-# Monero Research Lab
+# ByteRub Research Lab
 
-Copyright (c) 2014-2018, The Monero Project
+Copyright (c) 2014-2018, The ByteRub Project
 
 ## Research Resources
 
@@ -13,18 +13,18 @@ IRC on Freenode:
 
 ## Vulnerability Response
 
-- Our [Vulnerability Response Process](https://github.com/monero-project/meta/blob/master/VULNERABILITY_RESPONSE_PROCESS.md) encourages responsible disclosure
+- Our [Vulnerability Response Process](https://github.com/byterubpay/meta/blob/master/VULNERABILITY_RESPONSE_PROCESS.md) encourages responsible disclosure
 - We are also available via [HackerOne](https://hackerone.com/monero)
 
 ## About this Project
 
-Research activities performed by members of the Monero Research Lab, and others, are stored here to make collaboration easy, and to allow for other researchers to pick up where someone leaves off.
+Research activities performed by members of the ByteRub Research Lab, and others, are stored here to make collaboration easy, and to allow for other researchers to pick up where someone leaves off.
 
 This project is covered by the BSD 3-clause license as listed below. Contributors are welcome and warmly invited, but are expected to work in their own forks before submitting pull requests to this repository.
 
 ## Source Code and Concept License
 
-Copyright (c) 2014-2017, The Monero Project
+Copyright (c) 2014-2017, The ByteRub Project
 
 All rights reserved.
 
