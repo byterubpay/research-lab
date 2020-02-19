@@ -47,7 +47,7 @@
 \begin{fmbox}
 \hfill\setlength{\fboxrule}{0px}\setlength{\fboxsep}{5px}\fbox{\includegraphics[width=2in]{moneroLogo.png}}
 \dochead{Research bulletin \hfill MRL-0003}
-\title{Monero is Not That Mysterious}
+\title{ByteRub is Not That Mysterious}
 \date{25 September 2014}
 \author[
    addressref={mrl},
@@ -56,7 +56,7 @@
 
 
 \address[id=mrl]{
-  \orgname{Monero Research Lab}
+  \orgname{ByteRub Research Lab}
 }
 \end{fmbox}
 
@@ -69,7 +69,7 @@ Recently, there have been some vague fears about the CryptoNote
 source code and protocol floating around the internet based on the
 fact that it is a more complicated protocol than, for instance, Bitcoin.
 The purpose of this note is to try and clear up some misconceptions,
-and hopefully remove some of the mystery surrounding Monero Ring Signatures.
+and hopefully remove some of the mystery surrounding ByteRub Ring Signatures.
 I will start by comparing the mathematics involved in CryptoNote
 ring signatures (as described in \cite{CN}) to the mathematics in
 \cite{FS}, on which CryptoNote is based. After this, I will compare
@@ -336,12 +336,12 @@ are taken directly from \cite{FS}.
 \section{One-Time Ring Signatures (Application)}
 
 To understand how CryptoNote is implementing the One-Time Ring signatures,
-I built a model in Python of Crypto-ops.cpp and Crypto.cpp from the Monero source
+I built a model in Python of Crypto-ops.cpp and Crypto.cpp from the ByteRub source
 code using naive Twisted Edwards Curve operations (taken
 from code by Bernstein), rather than the apparently reasonably optimized
 operations existing in the CryptoNote code. Functions
 are explained in the code comments below. Using the model will produce
-a working ring signature that differs slightly from the Monero ring
+a working ring signature that differs slightly from the ByteRub ring
 signatures only because of hashing and packing differences between
 the used libraries. The full code is hosted at the following address: 
 \begin{center}
@@ -354,7 +354,7 @@ implentation was coded by Matthew Dempsky (Mochi Media, now Google)%
 }. 
 
 In addition, after comparing the python code to the paper, and in
-turn comparing the python code to the actual Monero source, it is
+turn comparing the python code to the actual ByteRub source, it is
 fairly easy to see that functions like \texttt{generate\_ring\_sig} are
 all doing what they are supposed to based on the protocol described
 in the whitepaper. For example, here is the ring signature generation algorithm

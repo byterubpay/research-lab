@@ -2,7 +2,7 @@
 #     MiniNero.py
 #A miniature, commented
 #port of CryptoNote and 
-#Monero: 
+#ByteRub: 
 #     crypto.cpp / crypto-ops.cpp
 #
 #Using Bernstein's ed25519.py for the curve stuff.

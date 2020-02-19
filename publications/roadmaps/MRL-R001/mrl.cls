@@ -48,7 +48,7 @@
 \NeedsTeXFormat{LaTeX2e}
 
 \ProvidesClass{mrl}
-   [\bmcart@version Monero Research Lab]
+   [\bmcart@version ByteRub Research Lab]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% General options:
 
@@ -159,13 +159,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Modifications and "add-on" for article.cls starts:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Initiate some info:
-\def\journal@name{Monero Research Lab}
+\def\journal@name{ByteRub Research Lab}
 %\let\journal@name\@empty
 \def\journal@url{http://monero.cc/}
 \def\journal@id{-mrl}
 \def\paper@url{}
 \def\info@line{}
-%\def\copyrightowner@text{Monero Research Lab}
+%\def\copyrightowner@text{ByteRub Research Lab}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Page dimensions
 

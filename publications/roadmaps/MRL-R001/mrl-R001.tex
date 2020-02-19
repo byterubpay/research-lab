@@ -125,7 +125,7 @@
 \begin{fmbox}
 \hfill\setlength{\fboxrule}{0px}\setlength{\fboxsep}{5px}\fbox{\includegraphics[width=2in]{moneroLogo.png}}
 \dochead{Research Road-map \hfill MRL-R001}
-\title{Priorities for Monero Research Lab}
+\title{Priorities for ByteRub Research Lab}
 \date{\today}
 \author[
    addressref={mrl},
@@ -134,33 +134,33 @@
 
 
 \address[id=mrl]{
-  \orgname{Monero Research Lab}
+  \orgname{ByteRub Research Lab}
 }
 \end{fmbox}
 
 \begin{abstractbox}
 \begin{abstract}
-We outline the various ideas currently under investigation by the Monero Research Lab, provide context for each task, and present some informative sources regarding each task. \end{abstract}
+We outline the various ideas currently under investigation by the ByteRub Research Lab, provide context for each task, and present some informative sources regarding each task. \end{abstract}
 \end{abstractbox}
 \end{frontmatter}
 
 We present a partial  MRL ``to-do'' list of research items. We rank the list according to approximate urgency and time-line, beginning with the short-term/high-priority projects and ending with the long-term/lower-priority projects. This is a partial list because each item comes equipped with many sub-items, and other items not included on this list will undoubtedly find their way onto future Research Road-maps.  
 
-We wish to emphasize that this list is incomplete, and we invite the members of the Monero community to make suggestions for changes to this list. Future Research Road-maps will include comments on the progress for each of these items. 
+We wish to emphasize that this list is incomplete, and we invite the members of the ByteRub community to make suggestions for changes to this list. Future Research Road-maps will include comments on the progress for each of these items. 
 
 
 \vspace{0.1in}
 
 \begin{enumerate}[1.]
 
-    \item \textbf{Zero-knowledge Lit Review}: We are listing this item first because it is rather exciting news: Jeffrey Quesnelle, a computer science graduate student at the University of Michigan at Dearborn is pursuing his thesis and has decided this includes some work with Monero Research Lab. Jeffrey has offered to prototype implementations of new cryptographic schemes, crunch numbers, evaluate performances, and try his hand at some cryptographic proofs. Together, we are publishing a literature review of zero knowledge schemes and their application in cryptocurrencies, for submission for peer review (journal to be determined) by the end of August 2017, although I am optimistic that we will complete this sooner rather than later. We will make available a pre-print on ArXiV after a few revisions.
+    \item \textbf{Zero-knowledge Lit Review}: We are listing this item first because it is rather exciting news: Jeffrey Quesnelle, a computer science graduate student at the University of Michigan at Dearborn is pursuing his thesis and has decided this includes some work with ByteRub Research Lab. Jeffrey has offered to prototype implementations of new cryptographic schemes, crunch numbers, evaluate performances, and try his hand at some cryptographic proofs. Together, we are publishing a literature review of zero knowledge schemes and their application in cryptocurrencies, for submission for peer review (journal to be determined) by the end of August 2017, although I am optimistic that we will complete this sooner rather than later. We will make available a pre-print on ArXiV after a few revisions.
     
     
     \item \textbf{Correcting RingCT Proofs}: In \cite{noether2016ring}, there are certain flaws in the proofs that should be corrected. This could take a few weeks, more or less, but is likely quite short-term. As far as we are aware, the claims made are still valid but at least one proof is inadequate.
     
-    \item \textbf{Recent criticisms}: Recently, critics have claimed the Monero blockchain is traceable, as in \cite{miller2017empirical} and \cite{kumar2017traceability}. Some of the concerns and claims made in these papers appear in the list below already, but we will not comment directly on these criticisms until our review is complete. We will take as much time as necessary for this, but it is urgent.
+    \item \textbf{Recent criticisms}: Recently, critics have claimed the ByteRub blockchain is traceable, as in \cite{miller2017empirical} and \cite{kumar2017traceability}. Some of the concerns and claims made in these papers appear in the list below already, but we will not comment directly on these criticisms until our review is complete. We will take as much time as necessary for this, but it is urgent.
     
-    \item \textbf{Threshold multisignatures}: Shen Noether once proposed an algorithm for  $k$-of-$N$ multisignatures in Monero.  These signatures are currently under development and testing; checking and developing rigorous proofs for this method is necessary. After revisions are made to Shen's original paper, we will publish an MRL Research Bulletin detailing the method.
+    \item \textbf{Threshold multisignatures}: Shen Noether once proposed an algorithm for  $k$-of-$N$ multisignatures in ByteRub.  These signatures are currently under development and testing; checking and developing rigorous proofs for this method is necessary. After revisions are made to Shen's original paper, we will publish an MRL Research Bulletin detailing the method.
     
     
     
@@ -169,10 +169,10 @@ We wish to emphasize that this list is incomplete, and we invite the members of 
     
     \item \textbf{Churning, Mandatory Minimum Mix-ins}: Detailed by \texttt{knaccc} in \cite{knaccc2017}, an attack is described where a merchant, Bob, and his customer, Alice, use an exchange, Eve, to convert cryptocurrency to fiat and back again. If Bob immediately converts all cryptocurrency to fiat after each transaction to limit his exposure to the volatility of cryptocurrency-to-fiat exchange rates, then Bob unintentionally provides information Eve needs to determine the identity of Alice. Urgency on this problem is not high because an interim solution exists, churning, but the urgency is not low either because that interim solution is expensive to users and causes blockchain bloat. However, we have not quantified the threat of this attack; it is not clear how serious this attack is. Determining more suitable solutions is not immediately obvious, and so this problem could require quite a bit of thought.
     
-    \item \textbf{Signature Size and RingCT}:  Blockchain bloat can be mitigated with efficient signatures. RingCT already uses more efficient signatures than signatures in the CryptoNote reference code (as described in \cite{noether2016ring}). Some schemes, such as \cite{chandran2007ring},  \cite{au2006constant}, \cite{au2006event}, exhibit sub-linear sizes of ring signature and have been investigated by MRL in the past. Trusted set-ups must be avoided at all costs, so there will be some significant development required in this area before implementation becomes plausible. This problem is annoying in its urgency, since the Monero blockchain is already quite large and will not slow in its space requirements until this problem (and other related problems) are solved.
+    \item \textbf{Signature Size and RingCT}:  Blockchain bloat can be mitigated with efficient signatures. RingCT already uses more efficient signatures than signatures in the CryptoNote reference code (as described in \cite{noether2016ring}). Some schemes, such as \cite{chandran2007ring},  \cite{au2006constant}, \cite{au2006event}, exhibit sub-linear sizes of ring signature and have been investigated by MRL in the past. Trusted set-ups must be avoided at all costs, so there will be some significant development required in this area before implementation becomes plausible. This problem is annoying in its urgency, since the ByteRub blockchain is already quite large and will not slow in its space requirements until this problem (and other related problems) are solved.
     
     
-    \item \textbf{The Distributional Problem}: Most of the time, the true signer of a ring signature in Monero is the owner of the newest transaction in that signature. How should the distribution for mix-ins depend on transaction age? This corresponds to certain interesting approximation problems in statistics, but also certain game-theoretic questions reminiscent of \cite{T-1955}, for example. As a matter of user privacy, the urgency of this problem is rather low, due to the one-time addresses in Monero, but this problem may have some interesting low-hanging fruit.
+    \item \textbf{The Distributional Problem}: Most of the time, the true signer of a ring signature in ByteRub is the owner of the newest transaction in that signature. How should the distribution for mix-ins depend on transaction age? This corresponds to certain interesting approximation problems in statistics, but also certain game-theoretic questions reminiscent of \cite{T-1955}, for example. As a matter of user privacy, the urgency of this problem is rather low, due to the one-time addresses in ByteRub, but this problem may have some interesting low-hanging fruit.
     
 
     
@@ -189,9 +189,9 @@ We wish to emphasize that this list is incomplete, and we invite the members of 
     
     \item \textbf{Traceability, extending RingCT}: We wish to investigate the plausibility of modifying RingCT (or using RingCT-like approaches) to obscure block height of transactions. Any such scheme is approaching zero-knowledge and is likely to be monstrously large and implausible. This is medium urgency, because such a scheme would dramatically improve user privacy. However, the tractability of this problem is not yet clear.
 
-    \item \textbf{Future-proofing Monero}: For each cryptographic component underlying the function of Monero, in case a breakthrough in technology renders that component obsolete, we ought to have one or more components waiting in the wings for an upgrade.
+    \item \textbf{Future-proofing ByteRub}: For each cryptographic component underlying the function of ByteRub, in case a breakthrough in technology renders that component obsolete, we ought to have one or more components waiting in the wings for an upgrade.
     
-    \item \textbf{Post-Quantum Future-proofing Monero}: Pie in the sky. We wish to answer three questions about this. First, given all post-quantum recommendations by international communities of cryptographers, exactly how big and slow is a \textit{transparent}, Bitcoin-like cryptocurrency going to be? Second, where are the bottlenecks? Third, how badly does increased anonymity cause bulkiness to scale in the post-quantum world? We are fairly confident that we can demonstrate the requirements for a truly post-quantum currency will be infeasible to satisfy for many years.
+    \item \textbf{Post-Quantum Future-proofing ByteRub}: Pie in the sky. We wish to answer three questions about this. First, given all post-quantum recommendations by international communities of cryptographers, exactly how big and slow is a \textit{transparent}, Bitcoin-like cryptocurrency going to be? Second, where are the bottlenecks? Third, how badly does increased anonymity cause bulkiness to scale in the post-quantum world? We are fairly confident that we can demonstrate the requirements for a truly post-quantum currency will be infeasible to satisfy for many years.
     
     
     
@@ -200,16 +200,16 @@ We wish to emphasize that this list is incomplete, and we invite the members of 
 \end{enumerate}
 
 
-Certainly, this (partial!) list is quite long, even with the help of Mr.\ Quesnelle; expansion of the Monero Research Lab may very well become a point of concern in the future, however we can cross that bridge when we come to it. 
+Certainly, this (partial!) list is quite long, even with the help of Mr.\ Quesnelle; expansion of the ByteRub Research Lab may very well become a point of concern in the future, however we can cross that bridge when we come to it. 
 
-We request members of the community contribute their opinions on this list and ideas they would like to see added. Areas of research, possible vulnerabilities to the Monero system, new cryptographic schemes, new models, and new insights are always welcome. Please do not hesitate to contact us.  
+We request members of the community contribute their opinions on this list and ideas they would like to see added. Areas of research, possible vulnerabilities to the ByteRub system, new cryptographic schemes, new models, and new insights are always welcome. Please do not hesitate to contact us.  
 
-The Monero Research Lab wishes to state emphatically that our concern is to report our findings on Monero, which is an open source project, as honestly and transparently as possible. Our goal is not to persuade, re-assure, or enrich speculators or investors; our goal is to assist the Monero community and the Monero Core Team in the design of a robust and strong cryptocurrency with an emphasis on user privacy.  Consequently, all findings will be responsibly disclosed to the Monero community. Responsible disclosure may involve maintaining secrecy regarding security flaws for a period of time before disclosure to the public, which provides the development team time to correct known issues and protect our users. This also provides time to discreetly contact the developers of other cryptocurrencies so they, also, may protect their users.
-
-
+The ByteRub Research Lab wishes to state emphatically that our concern is to report our findings on ByteRub, which is an open source project, as honestly and transparently as possible. Our goal is not to persuade, re-assure, or enrich speculators or investors; our goal is to assist the ByteRub community and the ByteRub Core Team in the design of a robust and strong cryptocurrency with an emphasis on user privacy.  Consequently, all findings will be responsibly disclosed to the ByteRub community. Responsible disclosure may involve maintaining secrecy regarding security flaws for a period of time before disclosure to the public, which provides the development team time to correct known issues and protect our users. This also provides time to discreetly contact the developers of other cryptocurrencies so they, also, may protect their users.
 
 
-\emph{Special Thanks}: We would like to issue a special thanks to the members of the Monero community who used the GetMonero.org Forum Funding System to support the Monero Research Lab. Readers may also regard this as a statement of conflict of interest, since our funding is denominated in Monero and provided directly by members of the Monero community by the Forum Funding System.
+
+
+\emph{Special Thanks}: We would like to issue a special thanks to the members of the ByteRub community who used the GetByteRub.org Forum Funding System to support the ByteRub Research Lab. Readers may also regard this as a statement of conflict of interest, since our funding is denominated in ByteRub and provided directly by members of the ByteRub community by the Forum Funding System.
 
 \medskip{}
 

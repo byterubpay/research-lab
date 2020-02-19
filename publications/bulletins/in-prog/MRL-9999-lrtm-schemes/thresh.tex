@@ -11,7 +11,7 @@
 
 \title{Ring Threshold Multisignature Schemes and Security Models}
 \authors{Brandon Goodell\footnote{\texttt{surae.noether@protonmail.com}} and Sarang Noether\footnote{\texttt{sarang.noether@protonmail.com}}}
-\affiliations{Monero Research Lab}
+\affiliations{ByteRub Research Lab}
 \date{\today}
 
 \type{RESEARCH BULLETIN}
@@ -45,7 +45,7 @@ If the number of users cooperating in the construction of a signature is not sec
 
 
 We consider a formal definition of one-time linkable ring threshold multisignature (OT-LRTM) schemes. We introduce the definition of \textit{coalition-indistinguishable keys}, \textit{signer ambiguity}, and \textit{existential unforgeability} in these schemes. We describe a modified implementation of $t$-of-$N$ linkable ring threshold multisignature (under the restriction $N-1 \leq t \leq N$ with $2 
-\leq t$ and $2 \leq N$) first described by previous Monero Research Lab (MRL) contributors Shen Noether in \cite{noether2016ring} and implemented for use in Monero by contributor \texttt{Luigi}. We prove that this implementation satisfies our security definitions. Lastly, we remark on some recent advancements in thresholdizing cryptoschemes from \cite{bonehthreshold} using different security definitions.
+\leq t$ and $2 \leq N$) first described by previous ByteRub Research Lab (MRL) contributors Shen Noether in \cite{noether2016ring} and implemented for use in ByteRub by contributor \texttt{Luigi}. We prove that this implementation satisfies our security definitions. Lastly, we remark on some recent advancements in thresholdizing cryptoschemes from \cite{bonehthreshold} using different security definitions.
 
 
 \subsection{Notation and Prerequisites}
@@ -57,7 +57,7 @@ We let $\mathbb{G}$ be a group with prime order $\mathfrak{q}$ and we let $G \in
 \section{MLSAG and Straightforward Threshold Set-ups}
 
 
-We briefly describe LSAG ring signatures in the sense of \cite{liu2004linkable} and their MLSAG variant as used in Monero, and then a straightforward implementation of an LRTM scheme (which is one-time if the transaction keys are one-time). 
+We briefly describe LSAG ring signatures in the sense of \cite{liu2004linkable} and their MLSAG variant as used in ByteRub, and then a straightforward implementation of an LRTM scheme (which is one-time if the transaction keys are one-time). 
 
 \subsection{MLSAGs}
 
@@ -199,7 +199,7 @@ We say an OT-LRTM scheme has Coalition Indistinguishable Keys (CIK) if the adver
 
 In addition to coalition indistinguishability, we desire the ring signature property of \textit{signer ambiguity}. Variations of security models appear in \cite{bender2006ring}. 
 
-Double-spend protection in Monero relies on a one-time linkable ring signature scheme that is not signer ambiguous with respect to adversarially generated keys according to the definition presented in \cite{bender2006ring}. Indeed, in Monero, $\texttt{Link}$ simply checks if two key images $J_i$ are identical. In this way, the signer ambiguity game falls apart: $\mathcal{A}$ can obtain signature-tag pair $(\sigma_0, J_0)$ on $M_0$ using ring $R_0$ with $Q_{i_0} \in R_0$ and a pair $(\sigma_1, J_1)$ on $M_1$ using ring $R_1$ with $Q_{i_1} \in R_1$. Then, upon receipt of $(\sigma,J)$ in step (v), $\mathcal{A}$ can check if $J=J_0$ or $J=J_1$. The definition may be modified, however, to take key images into account.
+Double-spend protection in ByteRub relies on a one-time linkable ring signature scheme that is not signer ambiguous with respect to adversarially generated keys according to the definition presented in \cite{bender2006ring}. Indeed, in ByteRub, $\texttt{Link}$ simply checks if two key images $J_i$ are identical. In this way, the signer ambiguity game falls apart: $\mathcal{A}$ can obtain signature-tag pair $(\sigma_0, J_0)$ on $M_0$ using ring $R_0$ with $Q_{i_0} \in R_0$ and a pair $(\sigma_1, J_1)$ on $M_1$ using ring $R_1$ with $Q_{i_1} \in R_1$. Then, upon receipt of $(\sigma,J)$ in step (v), $\mathcal{A}$ can check if $J=J_0$ or $J=J_1$. The definition may be modified, however, to take key images into account.
 
 
 Let $\mathcal{SO}(-,-,-,-)$ be a signing oracle that takes as input $(M,X,\mathcal{Q},k)$ (a message, a destination public user key, a ring of public transaction keys, and an index $k$) and outputs a valid signature-tag pair $(\sigma, J) \leftarrow \texttt{Sign}(M,X,\mathcal{Q},k,y)$ for some set $y$ of private user keys.
@@ -337,7 +337,7 @@ We provide an implementation of a restricted OT-LRTM scheme allowing only for $N
  \end{disc}
  
  \begin{disc}
- When a transaction is relayed on the Monero network, the transaction key pair $(S,P)$ is scanned by any of the coalition members. Any of these members can use their shared secret view key $a^*$ to check whether $B^* = P - H_s(a^* S)G$. If so, they can execute $\texttt{Sign}$ to sign a message with the private key $p$ without revealing it.
+ When a transaction is relayed on the ByteRub network, the transaction key pair $(S,P)$ is scanned by any of the coalition members. Any of these members can use their shared secret view key $a^*$ to check whether $B^* = P - H_s(a^* S)G$. If so, they can execute $\texttt{Sign}$ to sign a message with the private key $p$ without revealing it.
  \end{disc}
  
  
@@ -497,7 +497,7 @@ Additional helpful definitions appear in \cite{bonehthreshold}. For example, a t
 
 \vspace{0.1in}
 
-\textbf{Special Thanks}: We would like to issue a special thanks to the members of the Monero community who used the \texttt{GetMonero.org} Community Forum Funding System to support the Monero Research Lab. Readers may also regard this as a statement of conflict of interest, since our funding is denominated in Monero and provided directly by members of the Monero community by the Forum Funding System.
+\textbf{Special Thanks}: We would like to issue a special thanks to the members of the ByteRub community who used the \texttt{GetByteRub.org} Community Forum Funding System to support the ByteRub Research Lab. Readers may also regard this as a statement of conflict of interest, since our funding is denominated in ByteRub and provided directly by members of the ByteRub community by the Forum Funding System.
 
 \medskip{}
 

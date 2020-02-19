@@ -2,7 +2,7 @@
                ----------------------------
                Sublinear-sized ring signatures without trusted 
                set-ups or bilinear pairings. Summarized for 
-               Monero Research Lab by B Goodell
+               ByteRub Research Lab by B Goodell
                ----------------------------
                WARNING: Many errors such wow
 
@@ -431,7 +431,7 @@ Voila!
                IV. REFERENCES
 
     [1] Ruffing, Thyagarajan, Ronge, Schröder. "Boosting Private Payments in 
-        Monero: New Attacks, Exact Cryptographic Definitions, and Sublinear 
+        ByteRub: New Attacks, Exact Cryptographic Definitions, and Sublinear 
         Ring Signatures." In preparation.
     [2] Bootle, Cerulli, Chaidos, Ghadafi, Groth, Petit. "Short accountable 
         ring signatures based on DDH." European Symposium on Research in 

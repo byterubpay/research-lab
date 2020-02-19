@@ -1,14 +1,14 @@
 # MiniNero
 
-Copyright (c) 2014, The Monero Project
+Copyright (c) 2014, The ByteRub Project
 
 ## About this Project
 
-MiniNero is a reimplementation of CryptoNote one-time ring signatures in Python, and is roughly analogous with the way they are implemented in Monero. The main source that was used for creating MiniNero are the functions contained in crypto.cpp and crypto-ops.cpp in Monero. MiniNero produces working and valid ring signatures, although they differ slightly from the Monero ring signatures due to hashing and packing differences between the libraries used.
+MiniNero is a reimplementation of CryptoNote one-time ring signatures in Python, and is roughly analogous with the way they are implemented in ByteRub. The main source that was used for creating MiniNero are the functions contained in crypto.cpp and crypto-ops.cpp in ByteRub. MiniNero produces working and valid ring signatures, although they differ slightly from the ByteRub ring signatures due to hashing and packing differences between the libraries used.
 
 ## License
 
-Copyright (c) 2014, The Monero Project
+Copyright (c) 2014, The ByteRub Project
 
 All rights reserved.
 

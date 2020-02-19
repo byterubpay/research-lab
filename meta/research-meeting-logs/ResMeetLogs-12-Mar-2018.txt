@@ -204,7 +204,7 @@
 [2018-03-12 11:48:53] <endogenic> yes NM does
 [2018-03-12 11:49:09] <endogenic> rehrar is the only beacon
 [2018-03-12 11:49:11] <rehrar> endogenic came here and saw the people sobbing in the streets
-[2018-03-12 11:50:12] <suraeNoether> okay, lastly: I wanted to talk about how to educate the community about key safety with MoneroV and best practices (currently, I'm not convinced churn is non-negligibly helpful under a very specific threat model)
+[2018-03-12 11:50:12] <suraeNoether> okay, lastly: I wanted to talk about how to educate the community about key safety with ByteRubV and best practices (currently, I'm not convinced churn is non-negligibly helpful under a very specific threat model)
 [2018-03-12 11:51:30] <rehrar> What about a short one minute video?
 [2018-03-12 11:51:46] <suraeNoether> would be very convenient to link to
 [2018-03-12 11:52:09] <rehrar> We can put it on our soon-to-come media.getmonero.org as well as youtube and stuff
@@ -216,7 +216,7 @@
 [2018-03-12 11:53:50] <sarang> OR DON'T
 [2018-03-12 11:53:52] <Osiris1> nice
 [2018-03-12 11:54:01] <nioc> thx
-[2018-03-12 11:54:02] <ArticMine> My concern with this is that we do not end up protecting MoneroV from the claws of the bear
+[2018-03-12 11:54:02] <ArticMine> My concern with this is that we do not end up protecting ByteRubV from the claws of the bear
 [2018-03-12 11:54:05] <suraeNoether> nioc, looks to me like you're a pretty smart fella, if the past few years have shown us anything about anticipating change. :P ok. Does nayone have any questions, concerns, comments? I'll be posting my next funding request this afternoon. I have a hard time gauging the mood of an IRC chat room
 [2018-03-12 11:54:19] <suraeNoether> ArticMine: care to elaborate?
 [2018-03-12 11:54:26] <endogenic> i heard nioc is a cabbage
@@ -224,17 +224,17 @@
 [2018-03-12 11:54:28] <sarang> I don't have a good sense for how many users will fall for V
 [2018-03-12 11:55:01] → rpitricker0 joined (~rpitricke@unaffiliated/somewhatclueless)
 [2018-03-12 11:55:02] → somewhatclueless joined (~somewhatc@unaffiliated/somewhatclueless)
-[2018-03-12 11:55:11] <ArticMine> Basically i see MoneroV as an economic attack. If nobody claims their MoneroV then it price will be significantly inflated
+[2018-03-12 11:55:11] <ArticMine> Basically i see ByteRubV as an economic attack. If nobody claims their ByteRubV then it price will be significantly inflated
 [2018-03-12 11:55:26] → nickman70 joined (~nickman70@unaffiliated/somewhatclueless)
-[2018-03-12 11:56:48] <ArticMine> So we need a process for people to claim, their MoneroV safely and without impacting their own and other's privacy and to be blunt at the appropriate time dump the MoneroV on the market
+[2018-03-12 11:56:48] <ArticMine> So we need a process for people to claim, their ByteRubV safely and without impacting their own and other's privacy and to be blunt at the appropriate time dump the ByteRubV on the market
 [2018-03-12 11:57:13] <ArticMine> That is where the claws of the bear come in
 [2018-03-12 11:57:45] <sarang> What do you mean ArticMine? Spending an existing output on the V chain with random ring is immediately deanon
 [2018-03-12 11:57:58] <sarang> and contributes to the eventual deanon of your ringmates
 [2018-03-12 11:58:25] <rehrar> I see what he's saying though. If not a lot of people claim theirs, then it's a lot of immediate 'holders' which might artificalily inflate the price
 [2018-03-12 11:58:30] <ArticMine> The only way I can see this working is a spend on both chains with a significant number of overlapping rings
-[2018-03-12 11:58:33] <rehrar> which in turn, might make it seem like MoneroV was somewhat successful
-[2018-03-12 11:58:47] <rehrar> which also in turn might make other people try to do something similar with Monero
-[2018-03-12 11:59:28] <ArticMine> If the price of MoneroV crashes then this becomes a powerful deterrent for the future
+[2018-03-12 11:58:33] <rehrar> which in turn, might make it seem like ByteRubV was somewhat successful
+[2018-03-12 11:58:47] <rehrar> which also in turn might make other people try to do something similar with ByteRub
+[2018-03-12 11:59:28] <ArticMine> If the price of ByteRubV crashes then this becomes a powerful deterrent for the future
 [2018-03-12 11:59:47] <suraeNoether> ArticMine: i disagree. airdrops are designed to crash like that
 [2018-03-12 11:59:48] <sarang> Tough part is that a given user might not care about their transaction being deanon. But it's convincing them that it contributes to others that's trickyy
 [2018-03-12 11:59:54] <suraeNoether> they aren't designed for egalitarian long-term pegs
@@ -243,9 +243,9 @@
 [2018-03-12 12:00:26] <sarang> And their code needs to support it
 [2018-03-12 12:00:30] <ArticMine> It is but trike to do
 [2018-03-12 12:00:31] <sarang> they've shown they don't GAF
-[2018-03-12 12:01:05] <ArticMine> Then we will have to release a patched Monerov
+[2018-03-12 12:01:05] <ArticMine> Then we will have to release a patched ByteRubv
 [2018-03-12 12:01:36] <ArticMine> It does not have to be "official"
-[2018-03-12 12:01:56] <sarang> One idea I like is making it easier to fork the Monero codebase and blockchain safely
+[2018-03-12 12:01:56] <sarang> One idea I like is making it easier to fork the ByteRub codebase and blockchain safely
 [2018-03-12 12:02:08] <rehrar> *shrug* I may be thinking a bit casually here, but since this is the first time something like this is happening, and we're already going to be getting our upped ringsize before the fork, I think we can somewhat safely wait this one out and see how it plays
 [2018-03-12 12:02:08] <sarang> So for future attempts, they'd have to actively break that safety
 [2018-03-12 12:02:19] <sarang> and then we can give them bad publicity for actively hurting users
@@ -256,14 +256,14 @@
 [2018-03-12 12:03:46] <Olufunmilayo> ArticMine, what good would a patched monerov be if the core team is not behind monerov? Also, suraeNoether, time would also be a factor yes? both have to be done simultaneously
 [2018-03-12 12:03:46] <ArticMine> The trouble is that the same keys are used on both chains
 [2018-03-12 12:04:27] ⇐ rpitricker0 quit (~rpitricke@unaffiliated/somewhatclueless): Ping timeout: 240 seconds
-[2018-03-12 12:04:58] <ArticMine> It will allow those who wish to claim and sell their MoneroV to do so safely.
+[2018-03-12 12:04:58] <ArticMine> It will allow those who wish to claim and sell their ByteRubV to do so safely.
 [2018-03-12 12:05:10] <suraeNoether> oh no the double hash doesn't work unless all previous ring sigs do it that way. bah.
 [2018-03-12 12:05:31] <ArticMine> Not all but enough to provide a good mix
 [2018-03-12 12:05:49] ⇐ msvb-lab quit (~michael@x55b54289.dyn.telefonica.de): Ping timeout: 265 seconds
 [2018-03-12 12:07:35] <ArticMine> and that means pre fork mixins will only work
 [2018-03-12 12:07:51] <Olufunmilayo> ArticMine, you will then have two competing versions of monerov competing against each other. I do see the benefit but *shrug*
-[2018-03-12 12:08:03] <suraeNoether> okay, well, unless folks have more questions or suggestions, i think our best bet is simply to put out a video that says "don't claim your MoneroV, here is why."
-[2018-03-12 12:08:20] <ArticMine> No the patch can be compatible with the MoneroV consensus
+[2018-03-12 12:08:03] <suraeNoether> okay, well, unless folks have more questions or suggestions, i think our best bet is simply to put out a video that says "don't claim your ByteRubV, here is why."
+[2018-03-12 12:08:20] <ArticMine> No the patch can be compatible with the ByteRubV consensus
 [2018-03-12 12:08:24] <suraeNoether> because the math to patch monerov or to protect monero isn't obvious to me right now
 [2018-03-12 12:08:53] <ArticMine> I am not sure if there is a solution
 [2018-03-12 12:09:10] <iDunk> It's mooo's code to make it use the ringdb, AFAIUI.

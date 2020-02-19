@@ -526,19 +526,19 @@
 \author[
    addressref={mrl},
    email={lab@getmonero.org}
-]{\snm{Monero Core Team}}
+]{\snm{ByteRub Core Team}}
 
 \address[id=mrl]{
-  \orgname{Monero Research Lab}
+  \orgname{ByteRub Research Lab}
 }\end{fmbox}
 
 
 \begin{abstractbox}
 \begin{abstract}
 This article introduces a method of hiding transaction amounts in
-the strongly decentralized anonymous cryptocurrency Monero. Similar
-to Bitcoin, Monero is a cryptocurrency which is distributed through
-a proof of work ``mining'' process. The original Monero protocol
+the strongly decentralized anonymous cryptocurrency ByteRub. Similar
+to Bitcoin, ByteRub is a cryptocurrency which is distributed through
+a proof of work ``mining'' process. The original ByteRub protocol
 was based on CryptoNote, which uses ring signatures and one-time keys
 to hide the destination and origin of transactions. Recently the technique
 of using a commitment scheme to hide the amount of a transaction has
@@ -546,7 +546,7 @@ been discussed and implemented by Bitcoin Core Developer Gregory Maxwell.
 In this article, a new type of ring signature, A Multi-layered Linkable
 Spontaneous Anonymous Group signature is described which allows for hidden
 amounts, origins and destinations of transactions with reasonable
-efficiency and verifiable, trustless coin generation. Some extensions of the protocol are provided, such as Aggregate Schnorr Range Proofs, and Ring Multisignature. The author would like to note that early drafts of this were publicized in the Monero Community and on the bitcoin research irc channel. Blockchain hashed drafts are available in \cite{Snoe} showing that this work was started in Summer 2015, and completed in early October 2015. An eprint is also available at \url{http://eprint.iacr.org/2015/1098}.
+efficiency and verifiable, trustless coin generation. Some extensions of the protocol are provided, such as Aggregate Schnorr Range Proofs, and Ring Multisignature. The author would like to note that early drafts of this were publicized in the ByteRub Community and on the bitcoin research irc channel. Blockchain hashed drafts are available in \cite{Snoe} showing that this work was started in Summer 2015, and completed in early October 2015. An eprint is also available at \url{http://eprint.iacr.org/2015/1098}.
 \end{abstract}
 \end{abstractbox}
 
@@ -624,16 +624,16 @@ with $A^{\prime}=A$ to ring signature with. Thus, in the original CryptoNote pro
   Analysis of the above weaknesses is covered in \cite{mrl4}.
 
 
-\subsection{Ring CT for Monero}
+\subsection{Ring CT for ByteRub}
 
 An obvious way to negate the downsides of the CryptNote protocol, as described in the previous section, would be to implement hidden amounts for any transaction.
 In this
-paper, I describe a modification to the Monero protocol, a proof-of-work
+paper, I describe a modification to the ByteRub protocol, a proof-of-work
 cryptocurrency extending the original CryptoNote protocol, which allows the amounts sent in
 a transaction to be hidden. This modification is based on the Confidential
 Transactions \cite{GM} which are used on the Elements side-chain
 in Bitcoin, except it allows for their use in ring signatures. Therefore,
-the modification is given the obvious name of Ring Confidential Transactions for Monero. 
+the modification is given the obvious name of Ring Confidential Transactions for ByteRub. 
 
 In order to preserve the property that coins cannot be double spent,
 a generalization of the LSAG's of \cite{LWW} is described, a Multilayered Linkable
@@ -663,9 +663,9 @@ key, this is fairly important.
 
 \subsection{Acknowledgements}
 
-I would like to thank Monero team for lots of help and discussion
-in the creation of this paper and the Monero and Bitcoin Community
-for support and discussion. With respect to disclosure, the author received several donations totalling between 2 and 3 bitcoins from the Monero community in gratitude for his work on this research. 
+I would like to thank ByteRub team for lots of help and discussion
+in the creation of this paper and the ByteRub and Bitcoin Community
+for support and discussion. With respect to disclosure, the author received several donations totalling between 2 and 3 bitcoins from the ByteRub community in gratitude for his work on this research. 
 
 
 
@@ -690,7 +690,7 @@ private keys $\overline{x}=\left(x_{1},...,x_{r}\right)$.
 
 \subsection{\label{sub:BackLSAG}LWW signatures vs FS signatures}
 
-The ring signatures used in Monero and the original CryptoNote protocol are
+The ring signatures used in ByteRub and the original CryptoNote protocol are
 derived from the traceable ring signatures of \cite{FS}. The CryptoNote \cite{CN}
 ring signatures come with a ``key-image'' which means that a signer
 can only sign one ring on the block-chain with a given public and
@@ -790,7 +790,7 @@ proofs for the MLSAG's.
 
 
 For the Ring CT protocol, which will be described in section
-\ref{sec:Ring-CT-ForMonero}, I require a generalization of the Back
+\ref{sec:Ring-CT-ForByteRub}, I require a generalization of the Back
 LSAG signatures described in the previous section which allows for key-vectors (Definition
 \ref{def:A-key-vector-is}) rather than just keys. 
 
@@ -801,7 +801,7 @@ The intent of the MLSAG ring signature is the following:
 \begin{itemize}
 \item To prove that one of the $n$ signers knows the secret keys to their entire key vector. 
 \item To enforce that if the signer uses any one of their $m$ signing keys in another MLSAG
-signature, then the two rings are linked, and the second such MLSAG signature (ordered by the Monero block chain) is discarded. 
+signature, then the two rings are linked, and the second such MLSAG signature (ordered by the ByteRub block chain) is discarded. 
 \end{itemize}
 
 The algorithm proceeds as follows: Let $\mathfrak{m}$ be a given
@@ -845,7 +845,7 @@ Verification
 proceeds by regenerating all the $L_{i}^{j},R_{i}^{j}$ starting from
 $i=1$ as in section \ref{sub:BackLSAG} (which is the special case that $m=1$) and verifying
 the hash $c_{n+1}=c_{1}.$ 
-If these are being used in a blockchain setting such as Monero, signatures with key images $I_j$ which have already appeared are then rejected. 
+If these are being used in a blockchain setting such as ByteRub, signatures with key images $I_j$ which have already appeared are then rejected. 
 One can easily show, in a manner similar to \cite{LWW}: 
 \begin{itemize}
 \item The probability of a signer generating a valid signature without knowing
@@ -934,7 +934,7 @@ the network checks that
 \[
 \sum Inputs=\sum Outputs.
 \]
- However, this does not suffice in Monero: Since a given transaction
+ However, this does not suffice in ByteRub: Since a given transaction
 contains multiple possible inputs $P_{i},i=1,...,n$, only one of
 which belong to the sender, (see \cite[4.4]{CN}), then if we are
 able to check the above equality, it must be possible for the network
@@ -990,10 +990,10 @@ previous transaction, it suffices to consider the output amounts.}
 $b_{1},...b_{n}$ all lie in a range of positive values, e.g. $(0,2^{16}).$
 This can be accomplished essentially the same way as in \cite{GM} and is described in more detail in section \ref{AgSchnorr}.
 
-Finally, note that in the above, I have not made any mention of the tag-linkability property which is used in Monero and Cryptonote to prevent double-spends. The tag-linkability property here will result from combining the above discussion with the MLSAG signatures as described in Definition \ref{RCTProtocol}.
+Finally, note that in the above, I have not made any mention of the tag-linkability property which is used in ByteRub and Cryptonote to prevent double-spends. The tag-linkability property here will result from combining the above discussion with the MLSAG signatures as described in Definition \ref{RCTProtocol}.
 
 
-\section{\label{sec:Ring-CT-ForMonero}Ring CT For Monero Protocol}
+\section{\label{sec:Ring-CT-ForByteRub}Ring CT For ByteRub Protocol}
 
 
 \subsection{Protocol Description}
@@ -1020,7 +1020,7 @@ to zero.
 \left.\left\{ \left(P_{q+1}^{1},C_{q+1}^{1}\right),...,\left(P_{q+1}^{m},C_{q+1}^{m}\right),\left(\sum_{j}P_{q+1}^{j}+\sum_{j=1}^{m}C_{q+1}^{j}-\sum_{i}C_{i,out}\right)\right\} \right\} .
 \]
  be the generalized ring which we wish to sign. Note that the last
-column is a Ring-CT ring in the sense of section \ref{sec:Ring-CT-ForMonero}. 
+column is a Ring-CT ring in the sense of section \ref{sec:Ring-CT-ForByteRub}. 
 \item Compute the MLSAG signature $\Sigma$ on $\mathfrak{R}.$
 \end{itemize}
 In this case, by Theorem \ref{thm:Unforgeability}, $P_{\pi}^{j},j=1,...,m$ cannot be the signer of any
@@ -1040,12 +1040,12 @@ are likely possible.\end{rem}
 \subsection{Conversion from Visible Denominations to Commitments}
 \label{conversion}
 
-As Monero currently uses Blockchain visible scalars to represent amounts, it is important that there is a way to convert from visible amounts to commitments while preserving anonymity. In fact, this is not difficult. Given a pair $(P, a)$ where $P$ is a public key and $a$ represents an amount, this may be used as the input to a transaction as $(P, aH)$, and it must be checked by the verifier that the input amount $a$ multiplied by the masking point $H$, indeed gives $aH$. Thus at the first step, the input amounts will not be hidden, but the outputs of this transaction can be hidden, and all the necessary relations outlined in section \ref{sec:Ring-CT-ForMonero} hold. Note that a range proof is not necessary for such an input.
+As ByteRub currently uses Blockchain visible scalars to represent amounts, it is important that there is a way to convert from visible amounts to commitments while preserving anonymity. In fact, this is not difficult. Given a pair $(P, a)$ where $P$ is a public key and $a$ represents an amount, this may be used as the input to a transaction as $(P, aH)$, and it must be checked by the verifier that the input amount $a$ multiplied by the masking point $H$, indeed gives $aH$. Thus at the first step, the input amounts will not be hidden, but the outputs of this transaction can be hidden, and all the necessary relations outlined in section \ref{sec:Ring-CT-ForByteRub} hold. Note that a range proof is not necessary for such an input.
 \begin{rem}
 The obvious benefit of this method of converting from visible amounts to commitments is that the amount of coins generated by the mining process is trustlessly verifiable. This is an advantage of the Ring CT protocol over payment schemes such as \cite{Z} which rely on a trusted setup phase. 
 \end{rem}
 \subsection{Transaction Fees}
-As Monero is strongly decentralized (i.e. proof of work) it is necessary to pay miners a transaction fee for each transaction. This helps with the network security to prevent blockchain bloat. These fees must be paid "unmasked" i.e. just as $bH$, rather than $xG+bH$, and for some standardized amount $b$ so that the miner can verify that $b\cdot H = bH$ and thus there is enough money for the transaction fee while still having the equations in terms of $H$ so the necessary relations of section \ref{sec:Ring-CT-ForMonero} hold. 
+As ByteRub is strongly decentralized (i.e. proof of work) it is necessary to pay miners a transaction fee for each transaction. This helps with the network security to prevent blockchain bloat. These fees must be paid "unmasked" i.e. just as $bH$, rather than $xG+bH$, and for some standardized amount $b$ so that the miner can verify that $b\cdot H = bH$ and thus there is enough money for the transaction fee while still having the equations in terms of $H$ so the necessary relations of section \ref{sec:Ring-CT-ForByteRub} hold. 
 \subsection{Ring Multisignature}
 Note that a simple version of a $t$ of $m$ of $n$ ring- multisignature can be done with the MLSAG signatures. This allows a group of $m$ participants to create a multi-signature such that $t$ out of $m$ must sign for the signature to be accepted as valid, and in addition, it is signer ambiguous which $m$ keys are the participants out of the $n$ keys. 
 \begin{itemize}
@@ -1142,7 +1142,7 @@ so, as $c_1^2$ is determined by the verification protocol, it must be the case t
  This contradicts the discrete logarithm assumption for the given group. 
 \end{proof}
 \subsection{Representing Amounts }
-Amounts in the Ring CT protocol be represented in a similar manner as in \cite{GM}, however modified slightly to fit Monero.
+Amounts in the Ring CT protocol be represented in a similar manner as in \cite{GM}, however modified slightly to fit ByteRub.
 CryptoNote coins organize denominations of coins into a databases of indices, so that they may be referenced in order of their appearance as inputs for ring signatures. As all values in CryptoNote coins are represented as 64-bit unsigned integers, we can use a range proof over the entire register to encode the output amount to the recipient. Beneficially, this also allows all outputs to be mixed with each other, so only a single index of outputs in order of appearance is required. A range proof of this is approximately 5 kilobytes. Ring signatures for inputs then become much more resilient to analysis, as the anonymity set is widely expanded.
 
 While the range proofs are large, using a transaction hashing scheme that signs the transaction "prefix" (both input indices and outputs) and stores the range proof, along with ring signatures, separately enables large amounts of space saving when syncing to a checkpoint or operating as an SPV node. Similar to Sidechains Elements \cite{El}, we would store 
@@ -1162,7 +1162,7 @@ The receiver then:
 
 
 \section{Conclusion}
-The Ring Confidential Transactions protocol provides a strongly decentralized cryptocurrency (i.e. there is no privileged party) which has provable security estimates regarding the hiding of amounts, origins and destinations. In addition, coin generation in the Ring Confidential Transactions protocol is trustless and verifiably secure. These five factors are a necessity of a cash-like crypto-currency such as Monero. 
+The Ring Confidential Transactions protocol provides a strongly decentralized cryptocurrency (i.e. there is no privileged party) which has provable security estimates regarding the hiding of amounts, origins and destinations. In addition, coin generation in the Ring Confidential Transactions protocol is trustless and verifiably secure. These five factors are a necessity of a cash-like crypto-currency such as ByteRub. 
 
 \bibliographystyle{plain}
 \bibliography{biblio}

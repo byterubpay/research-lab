@@ -1,4 +1,4 @@
-# Copyright (c) 2014, The Monero Project
+# Copyright (c) 2014, The ByteRub Project
 # 
 # All rights reserved.
 # 
@@ -580,12 +580,12 @@ if __name__ == "__main__":
         print"MiniNero, a reimplementation of CryptoNote one-time ring"
         print"                  signatures in Python"
         print""
-        print"         Copyright (c) 2014, The Monero Project"
+        print"         Copyright (c) 2014, The ByteRub Project"
         print"--------------------------------------------------------"
         print""
         print"Note: MiniNero produces working and valid ring"
         print"signatures, although they differ slightly from the"
-        print"Monero ring signatures due to hashing and packing"
+        print"ByteRub ring signatures due to hashing and packing"
         print"differences between the libraries used."
         print""
         print"Run mininero.py with one of the below options"

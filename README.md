@@ -4,17 +4,17 @@ Copyright (c) 2014-2018, The ByteRub Project
 
 ## Research Resources
 
-Web: [getmonero.org](https://getmonero.org)  
-Forum: [forum.getmonero.org](https://forum.getmonero.org) 
+Web: [getbyterub.org](https://getbyterub.org)  
+Forum: [forum.getbyterub.org](https://forum.getbyterub.org) 
 IRC on Freenode:
-- [#monero-research-lab](http://webchat.freenode.net/?randomnick=1&channels=%23monero-research-lab&prompt=1&uio=d4)
-- [#monero-dev](http://webchat.freenode.net/?randomnick=1&channels=%23monero-dev&prompt=1&uio=d4)
+- [#byterub-research-lab](http://webchat.freenode.net/?randomnick=1&channels=%23byterub-research-lab&prompt=1&uio=d4)
+- [#byterub-dev](http://webchat.freenode.net/?randomnick=1&channels=%23byterub-dev&prompt=1&uio=d4)
 - [#kovri-dev](http://webchat.freenode.net/?randomnick=1&channels=%23kovri-dev&prompt=1&uio=d4)
 
 ## Vulnerability Response
 
 - Our [Vulnerability Response Process](https://github.com/byterubpay/meta/blob/master/VULNERABILITY_RESPONSE_PROCESS.md) encourages responsible disclosure
-- We are also available via [HackerOne](https://hackerone.com/monero)
+- We are also available via [HackerOne](https://hackerone.com/byterub)
 
 ## About this Project
 

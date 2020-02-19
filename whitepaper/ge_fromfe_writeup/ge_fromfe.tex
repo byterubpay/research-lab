@@ -62,16 +62,16 @@
 \title{Understanding ge fromfe frombytes vartime}
 
 
-\author{Shen Noether:shen.noether@gmx.com- Monero Research Labs}
+\author{Shen Noether:shen.noether@gmx.com- ByteRub Research Labs}
 \begin{abstract}
-I discuss the function ge fromfe frombytes vartime used in Monero's key-image functions. 
+I discuss the function ge fromfe frombytes vartime used in ByteRub's key-image functions. 
 \end{abstract}
 
 \maketitle
 
 \tableofcontents
 \section{Introduction}
-In this short note, I discuss the function ge-fromfe-frombytes-vartime which Monero uses for it's Key-images. Note that this code is inherited from the the original CryptoNote developers, who although seemingly competent at cryptography, have a deficiency when it comes to explaining or commenting their work. Note that I have already replaced the majority of Monero's cryptographic library last summer with Bernstein's "ref10" implementation of ed25519.
+In this short note, I discuss the function ge-fromfe-frombytes-vartime which ByteRub uses for it's Key-images. Note that this code is inherited from the the original CryptoNote developers, who although seemingly competent at cryptography, have a deficiency when it comes to explaining or commenting their work. Note that I have already replaced the majority of ByteRub's cryptographic library last summer with Bernstein's "ref10" implementation of ed25519.
 \par
 There have been several recent research papers (from well-known authors no less) discussing how to map an arbitrary string to an elliptic curve point, see \cite{Tib2010,Tib2013}. It is interesting that the "hash to Point" function, ge-fromfe-frombytes-vartime, used in CryptoNote \cite{CN} does not seem to appear in any of these, and in fact seems to be potentially a more efficient algorithm. 
 \section{fe frombytes}

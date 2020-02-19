@@ -57,9 +57,9 @@
 [2018-05-21 11:12:58] <suraeNoether> okay, so here's the list of stuff on my general MRL "todo" list:
 [2018-05-21 11:15:18] <suraeNoether> 1. BP fee models.
 [2018-05-21 11:15:25] <suraeNoether> 2. Transaction graph python library (see sneurlax[m]1 comment above)
-[2018-05-21 11:15:32] <suraeNoether> 3. Sarang and I would both like a full technical report on "what happens if PRNG is terrible in Monero? Failure model and effects analysis sort of deal.
-[2018-05-21 11:15:37] <suraeNoether> 4. Codifying Monero's best practices guidelines into a nice infographic. I believe sgp and rehrar have put some effort into this so far.
-[2018-05-21 11:16:03] <suraeNoether> 5. Monero Standards in general. We have lots of source material to start gathering these together, and I would like to get MOST of this done before next month; describing the current state of monero before BPs go live is probably going to be valuable later on.
+[2018-05-21 11:15:32] <suraeNoether> 3. Sarang and I would both like a full technical report on "what happens if PRNG is terrible in ByteRub? Failure model and effects analysis sort of deal.
+[2018-05-21 11:15:37] <suraeNoether> 4. Codifying ByteRub's best practices guidelines into a nice infographic. I believe sgp and rehrar have put some effort into this so far.
+[2018-05-21 11:16:03] <suraeNoether> 5. ByteRub Standards in general. We have lots of source material to start gathering these together, and I would like to get MOST of this done before next month; describing the current state of monero before BPs go live is probably going to be valuable later on.
 [2018-05-21 11:16:17] <sarang> 6. Payment channel infrastructure and prereqs
 [2018-05-21 11:16:26] <endogenic> ^
 [2018-05-21 11:16:31] <moneromooo> Ooooh yes please :)
