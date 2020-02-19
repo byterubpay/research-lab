@@ -1,6 +1,6 @@
-package how.monero.hodl.cursor;
+package how.byterub.hodl.cursor;
 
-import how.monero.hodl.crypto.Scalar;
+import how.byterub.hodl.crypto.Scalar;
 
 import java.math.BigInteger;
 

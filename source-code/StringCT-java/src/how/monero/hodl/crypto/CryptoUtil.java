@@ -1,7 +1,7 @@
-package how.monero.hodl.crypto;
+package how.byterub.hodl.crypto;
 
 import com.joemelsha.crypto.hash.Keccak;
-import how.monero.hodl.util.ExceptionAdapter;
+import how.byterub.hodl.util.ExceptionAdapter;
 import org.apache.commons.pool2.BasePooledObjectFactory;
 import org.apache.commons.pool2.PooledObject;
 import org.apache.commons.pool2.impl.DefaultPooledObject;
@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-import static how.monero.hodl.util.ByteUtil.*;
+import static how.byterub.hodl.util.ByteUtil.*;
 
 public class CryptoUtil {
 

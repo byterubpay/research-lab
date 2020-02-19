@@ -218,7 +218,7 @@ def fromPoint(aa): #supposed to reverse toPoint
     return binascii.hexlify(binvalue)
 
 def hashToPoint_cn(hexVal):
-    #note this is the monero one, won't work for C.T. 
+    #note this is the byterub one, won't work for C.T. 
     #however there is an alternative which will work for C.T.
     #pk = publicFromSecret(hexVal)
     HP = cn_fast_hash(hexVal)
@@ -228,7 +228,7 @@ def mul8(point):
     return binascii.hexlify(scalarmult_simple(point, 8))
 
 def hashToPoint_ct(hexVal):
-    #note this is the monero one, won't work for C.T. 
+    #note this is the byterub one, won't work for C.T. 
     #however there is an alternative which will work for C.T.
     #returns a hex string, not a point
     a = hexVal[:]

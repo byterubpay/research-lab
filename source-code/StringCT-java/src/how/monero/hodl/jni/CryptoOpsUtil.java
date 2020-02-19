@@ -1,4 +1,4 @@
-package how.monero.hodl.jni;
+package how.byterub.hodl.jni;
 
 public class CryptoOpsUtil {
 

@@ -1,6 +1,6 @@
-package how.monero.hodl.util;
+package how.byterub.hodl.util;
 
-import how.monero.hodl.crypto.Scalar;
+import how.byterub.hodl.crypto.Scalar;
 
 public class ByteUtil {
 

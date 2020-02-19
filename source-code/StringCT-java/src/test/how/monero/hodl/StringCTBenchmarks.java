@@ -1,7 +1,7 @@
-package test.how.monero.hodl;
+package test.how.byterub.hodl;
 
-import how.monero.hodl.crypto.Curve25519Point;
-import how.monero.hodl.ringSignature.SpendParams;
+import how.byterub.hodl.crypto.Curve25519Point;
+import how.byterub.hodl.ringSignature.SpendParams;
 
 import java.io.File;
 import java.io.IOException;
@@ -10,8 +10,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import static how.monero.hodl.ringSignature.StringCT.*;
-import static test.how.monero.hodl.StringCTSpendTest.createTestSpendParams;
+import static how.byterub.hodl.ringSignature.StringCT.*;
+import static test.how.byterub.hodl.StringCTSpendTest.createTestSpendParams;
 
 public class StringCTBenchmarks {
 

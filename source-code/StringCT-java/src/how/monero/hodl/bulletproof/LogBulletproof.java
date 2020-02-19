@@ -1,16 +1,16 @@
 // NOTE: this interchanges the roles of G and H to match other code's behavior
 
-package how.monero.hodl.bulletproof;
+package how.byterub.hodl.bulletproof;
 
-import how.monero.hodl.crypto.Curve25519Point;
-import how.monero.hodl.crypto.Scalar;
-import how.monero.hodl.crypto.CryptoUtil;
+import how.byterub.hodl.crypto.Curve25519Point;
+import how.byterub.hodl.crypto.Scalar;
+import how.byterub.hodl.crypto.CryptoUtil;
 import java.math.BigInteger;
 import java.util.Random;
 
-import static how.monero.hodl.crypto.Scalar.randomScalar;
-import static how.monero.hodl.crypto.CryptoUtil.*;
-import static how.monero.hodl.util.ByteUtil.*;
+import static how.byterub.hodl.crypto.Scalar.randomScalar;
+import static how.byterub.hodl.crypto.CryptoUtil.*;
+import static how.byterub.hodl.util.ByteUtil.*;
 
 public class LogBulletproof
 {

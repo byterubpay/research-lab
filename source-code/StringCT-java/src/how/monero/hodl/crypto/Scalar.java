@@ -1,14 +1,14 @@
-package how.monero.hodl.crypto;
+package how.byterub.hodl.crypto;
 
-import how.monero.hodl.util.ByteUtil;
+import how.byterub.hodl.util.ByteUtil;
 import org.nem.core.crypto.ed25519.arithmetic.Ed25519EncodedFieldElement;
 import org.nem.core.crypto.ed25519.arithmetic.Ed25519FieldElement;
 
 import java.math.BigInteger;
 import java.util.Arrays;
 
-import static how.monero.hodl.crypto.CryptoUtil.*;
-import static how.monero.hodl.util.ByteUtil.*;
+import static how.byterub.hodl.crypto.CryptoUtil.*;
+import static how.byterub.hodl.util.ByteUtil.*;
 
 public class Scalar {
 

@@ -1,4 +1,4 @@
-package how.monero.hodl.crypto;
+package how.byterub.hodl.crypto;
 
 import org.nem.core.crypto.ed25519.arithmetic.Ed25519EncodedGroupElement;
 import org.nem.core.crypto.ed25519.arithmetic.Ed25519GroupElement;
@@ -6,8 +6,8 @@ import org.nem.core.utils.ArrayUtils;
 
 import java.math.BigInteger;
 
-import static how.monero.hodl.crypto.CryptoUtil.*;
-import static how.monero.hodl.util.ByteUtil.*;
+import static how.byterub.hodl.crypto.CryptoUtil.*;
+import static how.byterub.hodl.util.ByteUtil.*;
 
 public class HashToPoint {
 

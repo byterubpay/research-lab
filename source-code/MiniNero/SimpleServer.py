@@ -5,7 +5,7 @@ import PaperWallet
 import cherrypy
 import os
 import time
-import bitmonerod
+import bitbyterubd
 import SimpleXMR2
 
 def HexSigningPubKey(s):
@@ -41,18 +41,18 @@ class MiniNeroServer:
         if Type == 'address':
             if (ver):
                 print("do rpc call")
-                #bitmonerod.myAddress()
+                #bitbyterubd.myAddress()
                 return ("Your Address is ")
         if Type == 'balance':
             if (ver):
                 print("do rpc call")
-                #bitmonerod.myAddress()
+                #bitbyterubd.myAddress()
                 return ('your balance is ??')
         if Type == 'send':
             if (ver) :
                 #create xmr2 order async, return uuid
                 uuid, xmr_amount, xmr_addr, xmr_pid = SimpleXMR2.btc2xmr(destination, amount)
-                bitmonerod.send(xmr_addr, float(xmr_amount), xmr_pid, 3) 
+                bitbyterubd.send(xmr_addr, float(xmr_amount), xmr_pid, 3) 
                 return ('order uuid: '+uuid)
         
 

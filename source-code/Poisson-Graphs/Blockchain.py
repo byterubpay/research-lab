@@ -225,7 +225,7 @@ class Blockchain(object):
         elif self.mode=="reciprocalOfMedian":
             # In this mode we use a bitcoin-style metric except instead of 1/average inter-arrival time
             # we use 1/median magnitude of inter-arrival time.
-            # And updated each block like with monero instead of every 2016 blocks like bitcoin.
+            # And updated each block like with byterub instead of every 2016 blocks like bitcoin.
             # We assume a sample size of only 600 blocks for now
             count = 600
             interArrivals = []

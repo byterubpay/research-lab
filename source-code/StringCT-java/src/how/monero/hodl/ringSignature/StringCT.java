@@ -1,17 +1,17 @@
-package how.monero.hodl.ringSignature;
+package how.byterub.hodl.ringSignature;
 
-import how.monero.hodl.crypto.Curve25519Point;
-import how.monero.hodl.crypto.Curve25519PointPair;
-import how.monero.hodl.crypto.Scalar;
-import how.monero.hodl.cursor.StringCTCursor;
-import how.monero.hodl.util.VarInt;
+import how.byterub.hodl.crypto.Curve25519Point;
+import how.byterub.hodl.crypto.Curve25519PointPair;
+import how.byterub.hodl.crypto.Scalar;
+import how.byterub.hodl.cursor.StringCTCursor;
+import how.byterub.hodl.util.VarInt;
 
 import java.math.BigInteger;
 
-import static how.monero.hodl.crypto.CryptoUtil.*;
-import static how.monero.hodl.crypto.Scalar.bigIntegerArrayToScalarArray;
-import static how.monero.hodl.crypto.Scalar.randomScalar;
-import static how.monero.hodl.util.ByteUtil.*;
+import static how.byterub.hodl.crypto.CryptoUtil.*;
+import static how.byterub.hodl.crypto.Scalar.bigIntegerArrayToScalarArray;
+import static how.byterub.hodl.crypto.Scalar.randomScalar;
+import static how.byterub.hodl.util.ByteUtil.*;
 
 
 public class StringCT {

@@ -1,4 +1,4 @@
-package how.monero.hodl.crypto;
+package how.byterub.hodl.crypto;
 
 import org.bouncycastle.jce.ECNamedCurveTable;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
@@ -12,8 +12,8 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.TreeMap;
 
-import static how.monero.hodl.crypto.CryptoUtil.hashToScalar;
-import static how.monero.hodl.util.ByteUtil.bytesToHex;
+import static how.byterub.hodl.crypto.CryptoUtil.hashToScalar;
+import static how.byterub.hodl.util.ByteUtil.bytesToHex;
 
 public class Curve25519Point {
 

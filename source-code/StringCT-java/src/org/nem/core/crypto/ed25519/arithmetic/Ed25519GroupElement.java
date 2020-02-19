@@ -1,7 +1,7 @@
 package org.nem.core.crypto.ed25519.arithmetic;
 
-import how.monero.hodl.crypto.Scalar;
-import how.monero.hodl.jni.CryptoOpsUtil;
+import how.byterub.hodl.crypto.Scalar;
+import how.byterub.hodl.jni.CryptoOpsUtil;
 import org.nem.core.utils.ByteUtils;
 
 import java.io.Serializable;

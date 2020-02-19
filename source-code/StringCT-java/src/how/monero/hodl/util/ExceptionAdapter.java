@@ -1,4 +1,4 @@
-package how.monero.hodl.util;
+package how.byterub.hodl.util;
 
 public class ExceptionAdapter {
   public static RuntimeException toRuntimeException(Exception e) {

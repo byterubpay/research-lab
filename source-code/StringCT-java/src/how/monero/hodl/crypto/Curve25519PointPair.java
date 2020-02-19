@@ -1,6 +1,6 @@
-package how.monero.hodl.crypto;
+package how.byterub.hodl.crypto;
 
-import static how.monero.hodl.util.ByteUtil.*;
+import static how.byterub.hodl.util.ByteUtil.*;
 
 public class Curve25519PointPair {
   public Curve25519Point P1;

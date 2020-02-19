@@ -1,16 +1,16 @@
-package test.how.monero.hodl;
+package test.how.byterub.hodl;
 
-import how.monero.hodl.crypto.Curve25519Point;
-import how.monero.hodl.crypto.Curve25519PointPair;
-import how.monero.hodl.crypto.Scalar;
-import how.monero.hodl.ringSignature.SpendParams;
+import how.byterub.hodl.crypto.Curve25519Point;
+import how.byterub.hodl.crypto.Curve25519PointPair;
+import how.byterub.hodl.crypto.Scalar;
+import how.byterub.hodl.ringSignature.SpendParams;
 
 import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.Date;
 
-import static how.monero.hodl.crypto.CryptoUtil.*;
-import static how.monero.hodl.ringSignature.StringCT.*;
+import static how.byterub.hodl.crypto.CryptoUtil.*;
+import static how.byterub.hodl.ringSignature.StringCT.*;
 
 public class StringCTSpendTest {
 

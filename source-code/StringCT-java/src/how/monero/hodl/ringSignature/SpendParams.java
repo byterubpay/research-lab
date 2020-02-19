@@ -1,8 +1,8 @@
-package how.monero.hodl.ringSignature;
+package how.byterub.hodl.ringSignature;
 
-import how.monero.hodl.crypto.Curve25519Point;
-import how.monero.hodl.crypto.Curve25519PointPair;
-import how.monero.hodl.crypto.Scalar;
+import how.byterub.hodl.crypto.Curve25519Point;
+import how.byterub.hodl.crypto.Curve25519PointPair;
+import how.byterub.hodl.crypto.Scalar;
 
 public class SpendParams {
 

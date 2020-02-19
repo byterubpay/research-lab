@@ -1,10 +1,10 @@
-package test.how.monero.hodl;
+package test.how.byterub.hodl;
 
-import how.monero.hodl.crypto.Curve25519PointPair;
-import how.monero.hodl.crypto.Scalar;
+import how.byterub.hodl.crypto.Curve25519PointPair;
+import how.byterub.hodl.crypto.Scalar;
 
-import static how.monero.hodl.crypto.CryptoUtil.COMeg;
-import static how.monero.hodl.ringSignature.StringCT.*;
+import static how.byterub.hodl.crypto.CryptoUtil.COMeg;
+import static how.byterub.hodl.ringSignature.StringCT.*;
 
 public class Prove2Valid2Test1a {
 

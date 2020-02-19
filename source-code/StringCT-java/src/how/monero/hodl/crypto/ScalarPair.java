@@ -1,4 +1,4 @@
-package how.monero.hodl.crypto;
+package how.byterub.hodl.crypto;
 
 import org.nem.core.crypto.ed25519.arithmetic.Ed25519FieldElement;
 

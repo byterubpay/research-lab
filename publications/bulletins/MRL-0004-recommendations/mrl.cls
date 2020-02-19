@@ -163,7 +163,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Initiate some info:
 \def\journal@name{ByteRub Research Lab}
 %\let\journal@name\@empty
-\def\journal@url{http://monero.cc/}
+\def\journal@url{http://byterub.cc/}
 \def\journal@id{-mrl}
 \def\paper@url{}
 \def\info@line{}

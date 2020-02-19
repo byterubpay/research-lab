@@ -50,7 +50,7 @@
 #define DP(x)
 #endif
 
-//atomic units of moneros
+//atomic units of byterubs
 #define ATOMS 64
 
 //for printing large ints
