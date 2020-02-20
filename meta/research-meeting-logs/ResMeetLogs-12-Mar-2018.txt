@@ -80,7 +80,7 @@
 [2018-03-12 11:19:12] <suraeNoether> ok, well
 [2018-03-12 11:19:29] <ArticMine> are all the audits going through ostif?
 [2018-03-12 11:19:37] <sarang> Two of them are
-[2018-03-12 11:19:41] <sarang> Benedikt will be paid directly in XMR
+[2018-03-12 11:19:41] <sarang> Benedikt will be paid directly in BTR
 [2018-03-12 11:19:45] <suraeNoether> ArticMine: I believe Buenz is independent
 [2018-03-12 11:19:46] <suraeNoether> ^
 [2018-03-12 11:20:00] <sarang> OSTIF's role is just to handle the payment
@@ -159,16 +159,16 @@
 [2018-03-12 11:40:27] <suraeNoether> sarang ^ yep
 [2018-03-12 11:40:33] <suraeNoether> i kind of want the schoalrships nearly strings-free
 [2018-03-12 11:40:37] <sarang> However, the devil's in the details
-[2018-03-12 11:41:28] <suraeNoether> as far as funding goes, though, i'm matching up to 5% of donations up to 50 XMR for this venture. If we manage to get 1000 XMR, I donate 50 XMR to the cause and we'll have 1050 XMR for the first year
+[2018-03-12 11:41:28] <suraeNoether> as far as funding goes, though, i'm matching up to 5% of donations up to 50 BTR for this venture. If we manage to get 1000 BTR, I donate 50 BTR to the cause and we'll have 1050 BTR for the first year
 [2018-03-12 11:41:29] <sgp_[m]> suraeNoether a little late to chime in, but I would love to help you with the EAE paper if there's any way I can
 [2018-03-12 11:41:40] <suraeNoether> sgp_[m]: PM me
 [2018-03-12 11:41:56] ⇐ nickman70 quit (~nickman70@unaffiliated/somewhatclueless): Remote host closed the connection
 [2018-03-12 11:41:56] ⇐ somewhatclueless quit (~somewhatc@unaffiliated/somewhatclueless): Remote host closed the connection
 [2018-03-12 11:41:56] ⇐ rpitricker0 quit (~rpitricke@unaffiliated/somewhatclueless): Remote host closed the connection
 [2018-03-12 11:42:09] → lithiumpt joined (~lithiumpt@84.39.112.114)
-[2018-03-12 11:42:34] <suraeNoether> and if we can manage that much XMR the first year, we can pay for like 5 scholarships for undergrads, 2 grad student grants, fix up a school or two in ZA, and host the first byterub conference (with no entry fee)
+[2018-03-12 11:42:34] <suraeNoether> and if we can manage that much BTR the first year, we can pay for like 5 scholarships for undergrads, 2 grad student grants, fix up a school or two in ZA, and host the first byterub conference (with no entry fee)
 [2018-03-12 11:42:34] <sarang> This is an interesting pilot project that could take many different directions
-[2018-03-12 11:42:41] <suraeNoether> and still have some XMR leftover for the next year
+[2018-03-12 11:42:41] <suraeNoether> and still have some BTR leftover for the next year
 [2018-03-12 11:42:53] <sarang> I think it'll important to keep the scope balanced between too narrow and too broad
 [2018-03-12 11:43:16] <suraeNoether> my primary concern right now is determining criteria for handing out scholarships
 [2018-03-12 11:43:19] <sarang> An established mission is gonna be essential to establishing and maintaining this direction

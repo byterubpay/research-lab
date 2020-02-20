@@ -4635,7 +4635,7 @@ void ge_tobytes(unsigned char *s,const ge_p2 *h)
 }
 /*
  *
- * xmr specific code
+ * btr specific code
  *
  *
 This code is from the original CryptoNote.

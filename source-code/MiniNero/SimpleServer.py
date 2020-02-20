@@ -6,7 +6,7 @@ import cherrypy
 import os
 import time
 import bitbyterubd
-import SimpleXMR2
+import SimpleBTR2
 
 def HexSigningPubKey(s):
   return binascii.hexlify(ed25519.publickey(ed25519.encodeint(MiniNero.hexToInt(s))))
@@ -50,9 +50,9 @@ class MiniNeroServer:
                 return ('your balance is ??')
         if Type == 'send':
             if (ver) :
-                #create xmr2 order async, return uuid
-                uuid, xmr_amount, xmr_addr, xmr_pid = SimpleXMR2.btc2xmr(destination, amount)
-                bitbyterubd.send(xmr_addr, float(xmr_amount), xmr_pid, 3) 
+                #create btr2 order async, return uuid
+                uuid, btr_amount, btr_addr, btr_pid = SimpleBTR2.btc2btr(destination, amount)
+                bitbyterubd.send(btr_addr, float(btr_amount), btr_pid, 3) 
                 return ('order uuid: '+uuid)
         
 

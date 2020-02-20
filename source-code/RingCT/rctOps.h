@@ -85,11 +85,11 @@ namespace rct {
 	void skpkGen(key &sk, key &pk);
 	tuple<key, key> skpkGen();
 	//generates a <secret , public> / Pedersen commitment to the amount
-	tuple<ctkey, ctkey> ctskpkGen(xmr_amount amount);
+	tuple<ctkey, ctkey> ctskpkGen(btr_amount amount);
     //this one is mainly for testing, can take arbitrary amounts..
     tuple<ctkey, ctkey> ctskpkGen(key bH);
 	//generates a random uint long long
-	xmr_amount randXmrAmount(xmr_amount upperlimit);
+	btr_amount randXmrAmount(btr_amount upperlimit);
 
 	//Scalar multiplications of curve points        
 

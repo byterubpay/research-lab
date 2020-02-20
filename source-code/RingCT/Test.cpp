@@ -150,7 +150,7 @@ int main(int argc, char *argv[]) {
     tie(sctmp, pctmp) = ctskpkGen(7000);
     sc.push_back(sctmp);
     pc.push_back(pctmp);
-    vector<xmr_amount >amounts;
+    vector<btr_amount >amounts;
 
 
     //add output 500

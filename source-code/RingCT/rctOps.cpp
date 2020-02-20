@@ -155,7 +155,7 @@ namespace rct {
     }
 
     //generates a <secret , public> / Pedersen commitment to the amount
-    tuple<ctkey, ctkey> ctskpkGen(xmr_amount amount) {
+    tuple<ctkey, ctkey> ctskpkGen(btr_amount amount) {
         ctkey sk, pk;
         skpkGen(sk.dest, pk.dest);
         skpkGen(sk.mask, pk.mask);
@@ -178,7 +178,7 @@ namespace rct {
     }
     
     //generates a random uint long long
-    xmr_amount randXmrAmount(xmr_amount upperlimit) {
+    btr_amount randXmrAmount(btr_amount upperlimit) {
         return h2d(skGen()) % (upperlimit);
     }
 

@@ -94,7 +94,7 @@ namespace rct {
     //   thus this proves that "amount" is in [0, 2^64]
     //   mask is a such that C = aG + bH, and b = amount
     //verRange verifies that \sum Ci = C and that each Ci is a commitment to 0 or 2^i
-    rangeSig proveRange(key & C, key & mask, const xmr_amount & amount);
+    rangeSig proveRange(key & C, key & mask, const btr_amount & amount);
     bool verRange(key & C, rangeSig & as);
 
     //Ring-ct MG sigs
@@ -114,7 +114,7 @@ namespace rct {
     //populateFromBlockchain creates a keymatrix with "mixin" columns and one of the columns is inPk
     //   the return value are the key matrix, and the index where inPk was put (random).
     void getKeyFromBlockchain(ctkey & a, size_t reference_index);
-    tuple<ctkeyM, xmr_amount> populateFromBlockchain(ctkeyV inPk, int mixin);
+    tuple<ctkeyM, btr_amount> populateFromBlockchain(ctkeyV inPk, int mixin);
 
     //RingCT protocol
     //genRct:
@@ -126,9 +126,9 @@ namespace rct {
     //decodeRct: (c.f. http://eprint.iacr.org/2015/1098 section 5.1.1)
     //   uses the attached ecdh info to find the amounts represented by each output commitment
     //   must know the destination private key to find the correct amount, else will return a random number
-    rctSig genRct(ctkeyV & inSk, ctkeyV  & inPk, const keyV & destinations, const vector<xmr_amount> amounts, const int mixin);
+    rctSig genRct(ctkeyV & inSk, ctkeyV  & inPk, const keyV & destinations, const vector<btr_amount> amounts, const int mixin);
     bool verRct(rctSig & rv);
-    xmr_amount decodeRct(rctSig & rv, key & sk, int i);
+    btr_amount decodeRct(rctSig & rv, key & sk, int i);
 
 
 

@@ -575,21 +575,21 @@ As a saving grace, within the CryptoNote protocol, users cannot be directly asso
 
 We now show how users are regularly forced to make transactions in the clear, regardless of their intent.
 
-One may have reasonably assumed that the original CryptoNote developers would have implemented a standardized denomination requirement for all transaction outputs, but this is not so. For example, whereas $102.5$ XMR would reasonably be represented as $100$ XMR, $2$ XMR and $0.5$ XMR, the protocol does not disallow any strange denominations such as $100$ XMR, $2$ XMR, $0.499999999$ XMR and $0.000000001$ XMR.  An output is unmixable either because it has been denominated unusually, such as our example with $0.499999999$ XMR (and hence the transaction output set associated with the denomination is empty) or its amount is smaller than the minimum transaction fee, such as our example with $0.000000001$ XMR.
+One may have reasonably assumed that the original CryptoNote developers would have implemented a standardized denomination requirement for all transaction outputs, but this is not so. For example, whereas $102.5$ BTR would reasonably be represented as $100$ BTR, $2$ BTR and $0.5$ BTR, the protocol does not disallow any strange denominations such as $100$ BTR, $2$ BTR, $0.499999999$ BTR and $0.000000001$ BTR.  An output is unmixable either because it has been denominated unusually, such as our example with $0.499999999$ BTR (and hence the transaction output set associated with the denomination is empty) or its amount is smaller than the minimum transaction fee, such as our example with $0.000000001$ BTR.
 
-Below is a simple example of dust generation using the current denomination code. In this example, Bob has $103.32111111$ in his wallet and decides to send Alice $53.32111111$ XMR with $2$ foreign transaction outputs used as mix-ins while receiving $50$ XMR in change. Let us presume that Bob's XMR is split up by denomination such that his $103.32111111$ XMR consists of an output of $100$ XMR, an output of $3$ XMR, an output of $0.3$ XMR, an output of $0.02$ XMR, and an output of dust, $0.00111111$ XMR. The current denomination code will take the output of $100$ XMR that Bob owns, split it into two outputs, each for $50$ XMR, and send one to Alice and one to Bob. It will then take all of the remaining outputs in Bob's wallet ($3$, $0.3$, $0.02$, $0.00111111$) and send them to Alice, each signed with their own ring signature with the minimum mix-in level wherever possible. Unfortunately, the dust output, $.00111111$ is in a unique category in the sense that the transaction output set responsible for the denomination $.00111111$ is empty. Hence, no mix-ins are possible. We get a diagram like this:
+Below is a simple example of dust generation using the current denomination code. In this example, Bob has $103.32111111$ in his wallet and decides to send Alice $53.32111111$ BTR with $2$ foreign transaction outputs used as mix-ins while receiving $50$ BTR in change. Let us presume that Bob's BTR is split up by denomination such that his $103.32111111$ BTR consists of an output of $100$ BTR, an output of $3$ BTR, an output of $0.3$ BTR, an output of $0.02$ BTR, and an output of dust, $0.00111111$ BTR. The current denomination code will take the output of $100$ BTR that Bob owns, split it into two outputs, each for $50$ BTR, and send one to Alice and one to Bob. It will then take all of the remaining outputs in Bob's wallet ($3$, $0.3$, $0.02$, $0.00111111$) and send them to Alice, each signed with their own ring signature with the minimum mix-in level wherever possible. Unfortunately, the dust output, $.00111111$ is in a unique category in the sense that the transaction output set responsible for the denomination $.00111111$ is empty. Hence, no mix-ins are possible. We get a diagram like this:
 
 \begin{align}\label{firstExample}
 \xymatrix{
-100 \text{~XMR~(Bob)~(mix-in=2)}  \ar[r] &50 \text{~XMR~(Alice)}, 50 \text{~XMR~(Bob)}\\
-3 \text{~XMR~(Bob)~(mix-in=2)}    \ar[r] & 3 \text{~XMR~(Alice)}\\
-0.3 \text{~XMR~(Bob)~(mix-in=2)} \ar[r] &0.3 \text{~XMR~(Alice)}\\
-0.02 \text{~XMR~(Bob)~(mix-in=2)} \ar[r] &0.02 \text{~XMR~(Alice)}\\
-0.00111111 \text{~XMR~(Bob)~(mix-in=0)} \ar[r] &0.00111111 \text{~XMR (Alice)}
+100 \text{~BTR~(Bob)~(mix-in=2)}  \ar[r] &50 \text{~BTR~(Alice)}, 50 \text{~BTR~(Bob)}\\
+3 \text{~BTR~(Bob)~(mix-in=2)}    \ar[r] & 3 \text{~BTR~(Alice)}\\
+0.3 \text{~BTR~(Bob)~(mix-in=2)} \ar[r] &0.3 \text{~BTR~(Alice)}\\
+0.02 \text{~BTR~(Bob)~(mix-in=2)} \ar[r] &0.02 \text{~BTR~(Alice)}\\
+0.00111111 \text{~BTR~(Bob)~(mix-in=0)} \ar[r] &0.00111111 \text{~BTR (Alice)}
 }
 \end{align}
   
-Some privacy issues with this transaction may have become obvious already; since CryptoNote does not enforce transaction outputs to adhere to a strict form of $A \times 10^{B}$ for an integer $1 \leq A \leq 9$, we have a so-called dust output of $0.00111111$ XMR, and this output cannot be mixed unless many other dust outputs happen to have such a strange denomination. Despite the privacy allegedly afforded by ring signatures with all other outputs, Bob has effectively stripped himself of privacy by including the dust input that is unmixable. Indeed, any observer can see this strange, unmixed output bundled with this transaction, and included in the same block; the observer will then draw obvious conclusions about funds ownership.
+Some privacy issues with this transaction may have become obvious already; since CryptoNote does not enforce transaction outputs to adhere to a strict form of $A \times 10^{B}$ for an integer $1 \leq A \leq 9$, we have a so-called dust output of $0.00111111$ BTR, and this output cannot be mixed unless many other dust outputs happen to have such a strange denomination. Despite the privacy allegedly afforded by ring signatures with all other outputs, Bob has effectively stripped himself of privacy by including the dust input that is unmixable. Indeed, any observer can see this strange, unmixed output bundled with this transaction, and included in the same block; the observer will then draw obvious conclusions about funds ownership.
 
 To worsen matters, Alice now also has a dust input that can not be spent using ring signatures without compounding the previous problem. While no observer can yet determine who received the transaction due to the uconditional unlinkability of the CryptoNote protocol, Alice will remove privacy from her transactions if she later decides to use that dust as an input due to the aforementioned problems with untraceability.
 
@@ -624,9 +624,9 @@ Recall we previously mentioned that, within a CryptoNote protocol like ByteRub, 
 
 In this Section, we describe how careless usage of outputs together can be used to link those transactions as belonging to a common user. In other words, transaction outputs that are used together are probably owned together. Using the principle from Section \ref{combinationAttacks}, we see that this is a form of the combinatorial attack. Although the \textit{ring signature} affords observers equiprobability across all possible signers, data exterior to the ring signature may allow for extra information.
 
-Consider the following generalized example. If Bob sends Alice some ByteRub, it is broken up into several transaction outputs as in Example \ref{firstExample}. When Alice goes on to spend that money, she may use two or more outputs from that same initial transaction in her ring signature. If so, an observer may conclude that the outputs stemming from a common root transaction are more likely to belong to the true signer of the transaction. This can lead to a probabilistic issue with traceability. This may be hard to visualize, so here is a specific example beginning with $1$ XMR in Bob's wallet. 
+Consider the following generalized example. If Bob sends Alice some ByteRub, it is broken up into several transaction outputs as in Example \ref{firstExample}. When Alice goes on to spend that money, she may use two or more outputs from that same initial transaction in her ring signature. If so, an observer may conclude that the outputs stemming from a common root transaction are more likely to belong to the true signer of the transaction. This can lead to a probabilistic issue with traceability. This may be hard to visualize, so here is a specific example beginning with $1$ BTR in Bob's wallet. 
 
-Bob wishes to send $0.75$ XMR to Alice, and will pay $0.01$ XMR in fees. The ByteRub that Alice receives, $0.75$ XMR, will be delivered as two new unspent transaction outputs with amounts $0.7$ XMR and $0.05$ XMR. Further, an output of $0.01$ XMR must be delivered as a fee. This leaves $0.24$ XMR as change, which will be delivered to Bob in two unspent transaction outputs of amount $0.2$ and $0.04$ XMR each. At some point in time later, Alice realizes she has $0.75$ XMR and decides to go spend it some place. When she does so, both of her outputs, $0.7$ XMR and $0.05$ XMR, are included in her ring signature. An observer could then look at her ring signature and draw a conclusion that whoever signed that ring signature probably is the owner of both the $0.7$ XMR and the $0.05$ XMR. Even if Alice used a ring signature with many mix-ins, since she used two outputs that originated from the same transaction, those outputs are more likely to be identifiable as owned by the true signer. The transaction could look something like Table \ref{linkByAssociation}.
+Bob wishes to send $0.75$ BTR to Alice, and will pay $0.01$ BTR in fees. The ByteRub that Alice receives, $0.75$ BTR, will be delivered as two new unspent transaction outputs with amounts $0.7$ BTR and $0.05$ BTR. Further, an output of $0.01$ BTR must be delivered as a fee. This leaves $0.24$ BTR as change, which will be delivered to Bob in two unspent transaction outputs of amount $0.2$ and $0.04$ BTR each. At some point in time later, Alice realizes she has $0.75$ BTR and decides to go spend it some place. When she does so, both of her outputs, $0.7$ BTR and $0.05$ BTR, are included in her ring signature. An observer could then look at her ring signature and draw a conclusion that whoever signed that ring signature probably is the owner of both the $0.7$ BTR and the $0.05$ BTR. Even if Alice used a ring signature with many mix-ins, since she used two outputs that originated from the same transaction, those outputs are more likely to be identifiable as owned by the true signer. The transaction could look something like Table \ref{linkByAssociation}.
 
 \begin{table}[!htb]
     \caption{Linking transaction outputs by association}
@@ -636,11 +636,11 @@ Bob wishes to send $0.75$ XMR to Alice, and will pay $0.01$ XMR in fees. The Byt
         \caption{Transaction $1$ by Bob}
         \begin{tabular}{|c|c|}\hline
             In & Out \\\hline
-            $1.0$ XMR (Bob) & $0.7$ XMR (Alice)\\
-             & $0.05$ XMR (Alice)\\
-             & $0.2$ XMR (Bob)\\
-             & $0.04$ XMR (Bob)\\
-             & $0.01$ XMR (Fee)\\\hline
+            $1.0$ BTR (Bob) & $0.7$ BTR (Alice)\\
+             & $0.05$ BTR (Alice)\\
+             & $0.2$ BTR (Bob)\\
+             & $0.04$ BTR (Bob)\\
+             & $0.01$ BTR (Fee)\\\hline
         \end{tabular}
     \end{subtable}%
     \begin{subtable}{.5\linewidth}
@@ -648,19 +648,19 @@ Bob wishes to send $0.75$ XMR to Alice, and will pay $0.01$ XMR in fees. The Byt
         \caption{Transaction $2$ by Bob}
         \begin{tabular}{|c|c|}\hline
             In & Out \\\hline
-            $0.7$ XMR (Alice) & $\cdots$ \\
-            $0.05$ XMR (Alice) & $\cdots$ \\\hline
+            $0.7$ BTR (Alice) & $\cdots$ \\
+            $0.05$ BTR (Alice) & $\cdots$ \\\hline
         \end{tabular}
     \end{subtable}%
 \end{table}
  
-Notice a few things about this example. First, this example is almost identical to the combinatorial attack using block height as will be described in Section \ref{combinationAttacks}. However, in this example, these outputs do not just share block height, but in fact they share a common root transaction. Second, this problem is symmetric with respect to Bob and Alice. Bob encounters a hazard also when he tries to spend his change output of $0.2$ or $0.04$ in a transaction. His ring signatures specify his originating transaction, as well, so if he decides to spend both his $0.2$ and $0.04$ XMR in the same transaction, they can be linked to him. 
+Notice a few things about this example. First, this example is almost identical to the combinatorial attack using block height as will be described in Section \ref{combinationAttacks}. However, in this example, these outputs do not just share block height, but in fact they share a common root transaction. Second, this problem is symmetric with respect to Bob and Alice. Bob encounters a hazard also when he tries to spend his change output of $0.2$ or $0.04$ in a transaction. His ring signatures specify his originating transaction, as well, so if he decides to spend both his $0.2$ and $0.04$ BTR in the same transaction, they can be linked to him. 
 
 \subsection{Combinatorial Attacks to Reveal Outputs}\label{combinationAttacks}
 
 In this section, we generalize the attack described in Section \ref{associationByUse} to describe a so-called combinatorial attack, during which a combinatorial analysis can be executed in order to draw a conclusion about output ownership. The primary conclusion of this section is simply that transactions should be broken up into several smaller transactions across periods of time as in a torrent, and users should re-send themselves their funds periodically. 
 
-Any data available to an observer about the transactions used to fashion a ring signature can be used in a combinatorial analysis to draw a conclusion about funds ownership. Consider the following example using block height. Lets say Cynthia received $10$, $20$, and $30$ XMR at block height $39,859$ in separate transactions. In a much later block, an observer, Eve, sees three transactions of $10$, $20$, and $30$ XMR, respectively. Eve sees that the $10$ XMR transaction uses a mix-in from block $39,859$, and so does the $20$ XMR transaction, and so does the $30$ XMR transaction. By checking all combinations available, Eve concludes that it is more likely that whoever received $60$ XMR at block height $39,859$ is spending those funds than any other user, although Cynthia and Eve do not necessarily know each others' identities. 
+Any data available to an observer about the transactions used to fashion a ring signature can be used in a combinatorial analysis to draw a conclusion about funds ownership. Consider the following example using block height. Lets say Cynthia received $10$, $20$, and $30$ BTR at block height $39,859$ in separate transactions. In a much later block, an observer, Eve, sees three transactions of $10$, $20$, and $30$ BTR, respectively. Eve sees that the $10$ BTR transaction uses a mix-in from block $39,859$, and so does the $20$ BTR transaction, and so does the $30$ BTR transaction. By checking all combinations available, Eve concludes that it is more likely that whoever received $60$ BTR at block height $39,859$ is spending those funds than any other user, although Cynthia and Eve do not necessarily know each others' identities. 
 
 This information can be used in tandem with other routes of attack. To be specific, \textit{if a set of distinct transactions has some common data} (such as a common block height) \textit{and if all transactions in this set use mix-ins with some other common data, then it is likely that these transactions are related by a common user}.  This provides some information to attackers about traceability. Our definition of a combinatorial attack seems strikingly general, and, in fact, includes the association-by-use attack described in Section \ref{associationByUse}. A combinatorial analysis of a set of transactions with some common data will lead to very few conclusions using this principle. That is to say, although this sort of \textit{combinatorial attack} may not work most of the time, when it does work, it works very well. 
 
@@ -748,7 +748,7 @@ Furthermore, for an exponential distribution with mean $\mu$, $99.9\%$ of all ob
 
 Recall that we set out with a \textit{temporal association} problem in which young mix-ins could be labeled as more likely to be the genuine transaction output; by choosing an exponential distribution, we have turned the problem on its head such that old mix-ins can be labeled as more likely to be the genuine transaction output.  Having said that, since old outputs are, indeed, spent far less often, applying the exponential distribution would still make the \textit{temporal association} problem better than it was under the uniform distribution in the sense that fewer transactions would be effected.
 
-Some problems with the exponential distribution could possibly be mitigated by relaxing the assumption that all transaction outputs, regardless of amount, have the same mean lifespan. If we allow the possibility that $10.0 XMR$ outputs have a longer lifespan than $1.0$ XMR outputs, which in turn have a longer lifespan than $0.1 XMR$ outputs, the exponential distribution may once again become reasonable.  However, the problem really comes from the fact that the exponential distribution is not heavy-tailed. One could choose another, heavy-tailed distribution, perhaps one that has been classically used to model income distributions, such as the Pareto distribution or the Burr distribution. These choices may make sense, given a deeper analysis of the lifespan data of Bitcoin transaction outputs.
+Some problems with the exponential distribution could possibly be mitigated by relaxing the assumption that all transaction outputs, regardless of amount, have the same mean lifespan. If we allow the possibility that $10.0 BTR$ outputs have a longer lifespan than $1.0$ BTR outputs, which in turn have a longer lifespan than $0.1 BTR$ outputs, the exponential distribution may once again become reasonable.  However, the problem really comes from the fact that the exponential distribution is not heavy-tailed. One could choose another, heavy-tailed distribution, perhaps one that has been classically used to model income distributions, such as the Pareto distribution or the Burr distribution. These choices may make sense, given a deeper analysis of the lifespan data of Bitcoin transaction outputs.
 \end{comment}
 
 
@@ -784,7 +784,7 @@ Since we cannot directly measure lifespan of a ByteRub transaction output, we us
 
 \subsubsection{Example of the Continuous Method}\label{exampleCont}
 
-We illustrate this method with a quick example. Keep in mind this is only an example. Presume the ByteRub Core Team decides that the average time until an unspent transaction output has been spent is $\tau = 10^4$ blocks (very close to our recommended $9820$ blocks computed from the Bitcoin network data).  Further presume that Bob wishes to carry out transaction $2A$ from Table \ref{linkByAssociationSolnA} to send Alice $0.05$ XMR from an output of $0.09$ XMR. In order to do so, Bob must find several transaction outputs with amount $0.09$ XMR. Let's say that he finds four transactions, each with ages $15$, $150$, $1500$, and $15000$ blocks, respectively. Furthermore, let's say that we have chosen an arbitrary network wide choice for $\tau = 10^4$ blocks. In this case, the probabilities that these blocks have already been spent are displayed in Table \ref{probabilities}. These would correspond to the values of $p_i$ in the pseudocode of Algorithm \ref{choosing}. 
+We illustrate this method with a quick example. Keep in mind this is only an example. Presume the ByteRub Core Team decides that the average time until an unspent transaction output has been spent is $\tau = 10^4$ blocks (very close to our recommended $9820$ blocks computed from the Bitcoin network data).  Further presume that Bob wishes to carry out transaction $2A$ from Table \ref{linkByAssociationSolnA} to send Alice $0.05$ BTR from an output of $0.09$ BTR. In order to do so, Bob must find several transaction outputs with amount $0.09$ BTR. Let's say that he finds four transactions, each with ages $15$, $150$, $1500$, and $15000$ blocks, respectively. Furthermore, let's say that we have chosen an arbitrary network wide choice for $\tau = 10^4$ blocks. In this case, the probabilities that these blocks have already been spent are displayed in Table \ref{probabilities}. These would correspond to the values of $p_i$ in the pseudocode of Algorithm \ref{choosing}. 
 
 \begin{table}[]
 \centering
@@ -833,7 +833,7 @@ By re-sending transactions to oneself iteratively over intervals of time with ra
 
 \subsection{Mitigating Association by Use}\label{mitigAssoc}
 
-To prevent a so-called ``Assocation by Use'' attack, an alternative transaction generation scheme could be used. Rather than generating a single transaction with as few unspent transaction outputs as possible, we can generate a separate transaction for each output. Hence, if Bob wants to send Alice $0.75$ XMR out of a wallet with $1$ XMR, then he will actually send two transactions. One transaction will send $0.7$ XMR and one transaction will send $0.05$ XMR.  First, the usual denomination and change-splitting method will be applied before sending $0.7$ XMR out of a wallet with $1$ XMR within, as in Table \ref{linkByAssociationSolnA}. Then, with his change, Bob will complete the transaction; after his first transaction, this will leave Bob with a spare $0.09$ XMR output, from which he can execute the usual denomination and change-splitting method before sending $0.05$ XMR to Alice as in Table \ref{linkByAssociationSolnB}.
+To prevent a so-called ``Assocation by Use'' attack, an alternative transaction generation scheme could be used. Rather than generating a single transaction with as few unspent transaction outputs as possible, we can generate a separate transaction for each output. Hence, if Bob wants to send Alice $0.75$ BTR out of a wallet with $1$ BTR, then he will actually send two transactions. One transaction will send $0.7$ BTR and one transaction will send $0.05$ BTR.  First, the usual denomination and change-splitting method will be applied before sending $0.7$ BTR out of a wallet with $1$ BTR within, as in Table \ref{linkByAssociationSolnA}. Then, with his change, Bob will complete the transaction; after his first transaction, this will leave Bob with a spare $0.09$ BTR output, from which he can execute the usual denomination and change-splitting method before sending $0.05$ BTR to Alice as in Table \ref{linkByAssociationSolnB}.
 
 \begin{table}[!htb]
     \caption{Transaction $1$}
@@ -843,10 +843,10 @@ To prevent a so-called ``Assocation by Use'' attack, an alternative transaction 
         \caption{Transaction $1A$ by Bob}
         \begin{tabular}{|c|c|}\hline
             In & Out \\\hline
-            $1.0$ XMR (Bob) & $0.7$ XMR (Alice)\\
-             & $0.2$ XMR (Bob)\\
-             & $0.09$ XMR (Bob)\\
-             & $0.01$ XMR (Fee)\\\hline
+            $1.0$ BTR (Bob) & $0.7$ BTR (Alice)\\
+             & $0.2$ BTR (Bob)\\
+             & $0.09$ BTR (Bob)\\
+             & $0.01$ BTR (Fee)\\\hline
         \end{tabular}
     \end{subtable}%
     \begin{subtable}{.5\linewidth}
@@ -854,7 +854,7 @@ To prevent a so-called ``Assocation by Use'' attack, an alternative transaction 
         \caption{Transaction $1B$ by Alice}
         \begin{tabular}{|c|c|}\hline
             In & Out\\\hline
-            $0.7$ XMR (Alice) & $\cdots$\\ \hline
+            $0.7$ BTR (Alice) & $\cdots$\\ \hline
         \end{tabular}
     \end{subtable} 
 \end{table}
@@ -866,9 +866,9 @@ To prevent a so-called ``Assocation by Use'' attack, an alternative transaction 
         \caption{Transaction $2A$ by Bob}
         \begin{tabular}{|c|c|}\hline
             In & Out \\\hline
-            $0.09$ XMR (Bob) & $0.05$ XMR (Alice)\\
-             & $0.03$ XMR (Bob)\\
-             & $0.01$ XMR (Fee)\\\hline
+            $0.09$ BTR (Bob) & $0.05$ BTR (Alice)\\
+             & $0.03$ BTR (Bob)\\
+             & $0.01$ BTR (Fee)\\\hline
         \end{tabular}
     \end{subtable}%
     \begin{subtable}{.5\linewidth}
@@ -876,7 +876,7 @@ To prevent a so-called ``Assocation by Use'' attack, an alternative transaction 
         \caption{Transaction $2B$ by Alice}
         \begin{tabular}{|c|c|}\hline
             In & Out\\\hline
-            $0.05$ XMR (Alice) & $\cdots$\\ \hline
+            $0.05$ BTR (Alice) & $\cdots$\\ \hline
         \end{tabular}
     \end{subtable} 
 \end{table}
@@ -884,9 +884,9 @@ To prevent a so-called ``Assocation by Use'' attack, an alternative transaction 
 
 In the above scheme, Bob generates only generates one extra output, but in doing so is able to protect Alice from being uncovered in the future by transactional association of outputs used in ring signatures.  Mining fees are increased according to the number of transaction outputs received, but anonymity is preserved. 
 
-Notice, however, that there is a subtlety under this alternative scheme. If Bob uses his own change output in order to send the $0.05$ XMR in Transaction $2A$, this can lead to the same circumstantial likelihood analysis that we were trying to avoid in the first place. Outputs may be associated as being spent from a common transaction, or from a common \textit{tree} of transactions, or spent from a common block, or spent from within a short span of time. This list may not be comprehensive. Of course, these scenarios are harder and harder for Eve to analyze compared to the simple scenario initially presented in Section \ref{associationByUse}. 
+Notice, however, that there is a subtlety under this alternative scheme. If Bob uses his own change output in order to send the $0.05$ BTR in Transaction $2A$, this can lead to the same circumstantial likelihood analysis that we were trying to avoid in the first place. Outputs may be associated as being spent from a common transaction, or from a common \textit{tree} of transactions, or spent from a common block, or spent from within a short span of time. This list may not be comprehensive. Of course, these scenarios are harder and harder for Eve to analyze compared to the simple scenario initially presented in Section \ref{associationByUse}. 
 
-Two outputs from disjoint transactions with two different block heights are less likely to come from a common owner than two outputs from a common transaction, or than two outputs from two transactions linked by a single step, or than two outputs from a similar block height. Hence, since Bob can also use any other output he owns in order to send the remaining $0.05$ XMR, not just his change output, he should endeavor to do so if possible. This leads us to the natural solution, which is simple to implement in its basic form: use one and only one input for every transaction, and output one and only one output to the recipient. This is repeated until all desired funds are transferred to the recipient.
+Two outputs from disjoint transactions with two different block heights are less likely to come from a common owner than two outputs from a common transaction, or than two outputs from two transactions linked by a single step, or than two outputs from a similar block height. Hence, since Bob can also use any other output he owns in order to send the remaining $0.05$ BTR, not just his change output, he should endeavor to do so if possible. This leads us to the natural solution, which is simple to implement in its basic form: use one and only one input for every transaction, and output one and only one output to the recipient. This is repeated until all desired funds are transferred to the recipient.
 
 This is, of course, an inefficient method of generating transaction outputs. To increase efficiency, multiple inputs may also be used to generate a transaction if and only if the outputs referenced do not lie within a few blocks of each other.
 
@@ -900,7 +900,7 @@ Implementing a network-wide minimum mix-in policy $n=2$ to the ByteRub architect
 \item The peer-to-peer protocol may be modified such that transactions that do not satisfy the minimum mix-in for all their ring signatures are not relayed, unless those transactions lie in transaction output sets without enough mix-ins.
 \end{enumerate}
 
-Furthermore, if a transaction is included in a block with height greater than a certain critical value, $n=2$ shall not be sufficient, but in fact we will require $n=4$. We recommend this block height to correspond to about two to three years after publication of this document, but the specifics are unimportant.  Our roadmap to implement a network-wide minimum mix-in policy is to implement $(1)$ soon, skip $(2)$, and plan $(3)$ for a later date after vigorous testing on our testnet. The primary obstacle to immediate implementation is transaction \textit{dust}. To overcome the obstacle, we define a \textit{legal transaction output form} as any number $A \times 10^{B}$ where $A$ is an integer $1 \leq A \leq 9$ and $B$ is any integer $-12 \leq B$. Hence, a transaction output with amount $0.00111111$ XMR does not follow the legal transaction output form, but the transaction outputs $0.001, 0.0001, 0.00001, 0.000001, 0.0000001$, and $0.00000001$ XMR are each legal. We propose the following policy:
+Furthermore, if a transaction is included in a block with height greater than a certain critical value, $n=2$ shall not be sufficient, but in fact we will require $n=4$. We recommend this block height to correspond to about two to three years after publication of this document, but the specifics are unimportant.  Our roadmap to implement a network-wide minimum mix-in policy is to implement $(1)$ soon, skip $(2)$, and plan $(3)$ for a later date after vigorous testing on our testnet. The primary obstacle to immediate implementation is transaction \textit{dust}. To overcome the obstacle, we define a \textit{legal transaction output form} as any number $A \times 10^{B}$ where $A$ is an integer $1 \leq A \leq 9$ and $B$ is any integer $-12 \leq B$. Hence, a transaction output with amount $0.00111111$ BTR does not follow the legal transaction output form, but the transaction outputs $0.001, 0.0001, 0.00001, 0.000001, 0.0000001$, and $0.00000001$ BTR are each legal. We propose the following policy:
 
 \begin{enumerate}[(i)]
 \item Within a wallet, users may be required to produce only transaction outputs adhering to the legal transaction output form.
@@ -997,7 +997,7 @@ That is, our new distribution is a simple function of our old distribution. We p
 \end{algorithmic}
 \end{algorithm}
 
-Different variants of the above algorithm can be used by defining an expected age of a transaction based on it's denomination. Intuitively, it's more likely that a user hoards a very large transaction output with, say, a denomination around $100,000$ XMR, rather than a small transaction output with, say, a denomination around $0.1$ XMR.
+Different variants of the above algorithm can be used by defining an expected age of a transaction based on it's denomination. Intuitively, it's more likely that a user hoards a very large transaction output with, say, a denomination around $100,000$ BTR, rather than a small transaction output with, say, a denomination around $0.1$ BTR.
 
 \end{comment}
 

@@ -103,7 +103,7 @@ namespace rct {
 	};
 
 	//containers for representing amounts
-	typedef uint64_t xmr_amount;
+	typedef uint64_t btr_amount;
 	typedef unsigned int bits[ATOMS];
 	typedef key key64[64];
 
@@ -232,7 +232,7 @@ namespace rct {
 	void dp(char * a, int l);
 	void dp(keyV a);
 	void dp(keyM a);
-	void dp(xmr_amount vali);
+	void dp(btr_amount vali);
 	void dp(int vali);
 	void dp(bits amountb);
 	void dp(char * st);
@@ -240,20 +240,20 @@ namespace rct {
 	//various conversions
 
 	//uint long long to 32 byte key
-	void d2h(key & amounth, xmr_amount val);
-	key d2h(xmr_amount val);
+	void d2h(key & amounth, btr_amount val);
+	key d2h(btr_amount val);
 	//uint long long to int[64]
-	void d2b(bits  amountb, xmr_amount val);
+	void d2b(bits  amountb, btr_amount val);
 	//32 byte key to uint long long
 	// if the key holds a value > 2^64
 	// then the value in the first 8 bytes is returned
-	xmr_amount h2d(const key &test);
+	btr_amount h2d(const key &test);
 	//32 byte key to int[64]
 	void h2b(bits  amountb2, key & test);
 	//int[64] to 32 byte key
 	void b2h(key  & amountdh, bits amountb2);
 	//int[64] to uint long long
-	xmr_amount b2d(bits amountb);
+	btr_amount b2d(bits amountb);
 }
 
 #endif	/* RCTTYPES_H */

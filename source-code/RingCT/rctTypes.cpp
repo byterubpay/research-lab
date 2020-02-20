@@ -86,7 +86,7 @@ namespace rct {
 		printf("]");
 		printf("\n");
 	}
-	void dp(xmr_amount vali) {
+	void dp(btr_amount vali) {
 		printf("x: %"PRIu64"\n", vali);
 		printf("\n");
 	}
@@ -111,33 +111,33 @@ namespace rct {
 	//Various Conversions 
     
     //uint long long to 32 byte key
-	void d2h(key & amounth, const xmr_amount in) {
+	void d2h(key & amounth, const btr_amount in) {
 		sc_0(amounth.bytes);
-		xmr_amount val = in;
+		btr_amount val = in;
 		int i = 0, byte = 0;
 		while (val != 0) {
 			amounth[i] = (unsigned char)(val & 0xFF);
 			i++;
-			val /= (xmr_amount)256;
+			val /= (btr_amount)256;
 		}
 	}
     
     //uint long long to 32 byte key
-	key d2h(const xmr_amount in) {
+	key d2h(const btr_amount in) {
 		key amounth;
 		sc_0(amounth.bytes);
-		xmr_amount val = in;
+		btr_amount val = in;
 		int i = 0;
 		while (val != 0) {
 			amounth[i] = (unsigned char)(val & 0xFF);
 			i++;
-			val /= (xmr_amount)256;
+			val /= (btr_amount)256;
 		}
 		return amounth;
 	}
 
     //uint long long to int[64]
-	void d2b(bits  amountb, xmr_amount val) {
+	void d2b(bits  amountb, btr_amount val) {
 		amountb;
 		int i = 0;
 		while (val != 0) {
@@ -154,11 +154,11 @@ namespace rct {
 	//32 byte key to uint long long
 	// if the key holds a value > 2^64
 	// then the value in the first 8 bytes is returned    
-	xmr_amount h2d(const key & test) {
-		xmr_amount vali = 0;
+	btr_amount h2d(const key & test) {
+		btr_amount vali = 0;
 		int j = 0;
 		for (j = 7; j >= 0; j--) {
-			vali = (xmr_amount)(vali * 256 + (unsigned char)test[j]);
+			vali = (btr_amount)(vali * 256 + (unsigned char)test[j]);
 		}
 		return vali;
 	}
@@ -198,11 +198,11 @@ namespace rct {
 	}
     
     //int[64] to uint long long
-	xmr_amount b2d(bits amountb) {
-		xmr_amount vali = 0;
+	btr_amount b2d(bits amountb) {
+		btr_amount vali = 0;
 		int j = 0;
 		for (j = 63; j >= 0; j--) {
-			vali = (xmr_amount)(vali * 2 + amountb[j]);
+			vali = (btr_amount)(vali * 2 + amountb[j]);
 		}
 	}
 

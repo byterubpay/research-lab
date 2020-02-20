@@ -36,7 +36,7 @@
 [2018-05-21 11:08:17] <suraeNoether> before i get to my big list: has anyone else been working on anything interesting? I don't want to downplay the contributions of other folks
 [2018-05-21 11:08:32] <endogenic> well vtnerd has, a little
 [2018-05-21 11:08:40] <suraeNoether> oh?
-[2018-05-21 11:08:40] <endogenic> he was looking into xmr <> btc swaps
+[2018-05-21 11:08:40] <endogenic> he was looking into btr <> btc swaps
 [2018-05-21 11:08:44] <sarang> UkoeHB worked up a great draft of his tech explanation of transactions
 [2018-05-21 11:08:52] <endogenic> he came up with a funny method by which you'd have to burn your btc priv key :P
 [2018-05-21 11:08:56] <sarang> endogenic: there were all sorts of curve issues tho
