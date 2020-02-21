@@ -89,7 +89,7 @@ namespace rct {
     //this one is mainly for testing, can take arbitrary amounts..
     tuple<ctkey, ctkey> ctskpkGen(key bH);
 	//generates a random uint long long
-	btr_amount randXmrAmount(btr_amount upperlimit);
+	btr_amount randBtrAmount(btr_amount upperlimit);
 
 	//Scalar multiplications of curve points        
 

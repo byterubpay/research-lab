@@ -60,7 +60,7 @@ int main(int argc, char *argv[]) {
     
     int j = 0;
     for (j = 0 ; j < N ; j++) {
-        indi[j] = (int)randXmrAmount(1);
+        indi[j] = (int)randBtrAmount(1);
         xv[j] = skGen();
         if ( indi[j] == 0 ) {
             P1v[j] = scalarmultBase(xv[j]);

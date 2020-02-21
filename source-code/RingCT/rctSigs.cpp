@@ -419,12 +419,12 @@ namespace rct {
 	tuple<ctkeyM, btr_amount> populateFromBlockchain(ctkeyV inPk, int mixin) {
 		int rows = inPk.size();
 		ctkeyM rv(mixin, inPk);
-		int index = randXmrAmount(mixin);
+		int index = randBtrAmount(mixin);
 		int i = 0, j = 0;
 		for (i = 0; i < mixin; i++) {
 			if (i != index) {
 				for (j = 0; j < rows; j++) {
-					getKeyFromBlockchain(rv[i][j], (size_t)randXmrAmount);
+					getKeyFromBlockchain(rv[i][j], (size_t)randBtrAmount);
 				}
 			}
 		}
